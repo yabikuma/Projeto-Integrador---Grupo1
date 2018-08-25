@@ -1,3 +1,7 @@
+*{
+  box-sizing: border-box;
+}
+
 body{
     font-family: sans-serif;
     font-size: 16px;
@@ -10,7 +14,3 @@ body{
     padding: 0;
     margin-top: 10px;
 }
-
-
-
-
