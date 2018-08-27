@@ -1,23 +1,174 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Sprint 1</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" type="text/css"  href="css/style.css"/>
-  <!--Bootstrap CSS Versão 4.0-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-</head>
-<body>
-    <div class="container" id="custom-banner">
-        <img src="img/vintage.png" class="img-fluid">
-      </div>
 
-  
-<!--Plu-glins do Bootstrap-->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Sprint 1</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+	<!--Bootstrap CSS Versão 4.0.0-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	
+
+
+</head>
+
+<body>
+	<div class="container custom-container">
+		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+			<ol class="carousel-indicators">
+			<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+			<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+			<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+			</ol>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<div class="carousel-caption d-none d-md-block">
+					<h3>Bem Vindo a Gen Vintage</h3>
+					</div>
+					<img class="d-block w-100" src="img/banner0.jpg" alt="First slide">
+				</div>
+				<div class="carousel-item">
+					<div class="carousel-caption d-none d-md-block">
+					<h3>Bem Vindo a Gen Vintage</h3>
+					</div>
+					<img class="d-block w-100" src="img/banner1.png" alt="Second slide">
+				</div>
+				<div class="carousel-item">
+					<div class="carousel-caption d-none d-md-block">
+					<h3>Bem Vindo a Gen Vintage</h3>
+					</div>
+					<img class="d-block w-100" src="img/banner2.png" alt="Third slide">
+				</div>
+			</div>
+			
+			<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+	</div>
+	
+	<!-- <div class="container custom-container">
+		<h4>Não é Velho é Vintage</h4>
+		<img src="img/banner.png" class="img-fluid">
+	</div> -->
+
+
+	<section class="container custom-container"><!--Seção Categorias-->
+	<div class="row">
+		<div class="col-12 text-center my-3"> <!--Título da Seção-->
+			<h2>Categorias</h2>
+		</div>
+	</div>
+	
+	<div class="row"><!--Row Produtos-->
+		<div class="col-12 col-sm-6 col-md-3 product">
+			<h6>Guitarra</h6>
+			<img src="img/produto1.jpg" class="img-thumbnail">	
+			<button type="button" class="btn btn-primary">Comprar</button>
+		</div>
+
+	<div class="col-12 col-sm-6 col-md-3 product">
+		<h6>Vinil</h6>
+		<img src="img/produto2.jpg" class="img-thumbnail">
+		<button type="button" class="btn btn-primary">Comprar</button>
+	</div>
+
+	<div class="col-12 col-sm-6 col-md-3 product">
+		<h6>Telefone</h6>
+		<img src="img/produto3.jpg" class="img-thumbnail">
+		<button type="button" class="btn btn-primary">Comprar</button>
+	</div>
+
+	<div class="col-12 col-sm-6 col-md-3 product">
+		<h6>Relógio</h6>
+		<img src="img/produto4.jpg" class="img-thumbnail">
+		<button type="button" class="btn btn-primary">Comprar</button>
+	</div>
+
+	</div><!-- Fim da Row Produtos-->
+	</section><!--Fim da Categorias-->
+
+	<section class="container custom-container"><!--Seção Promoções-->
+	<div class="row">
+		<div class="col-12 text-center my-3"> <!--Título da Seção-->
+			<h2>Promoções</h2>
+		</div>
+	</div>
+	
+	<div class="row"><!--Row Produtos Promoção-->
+		<div class="col-12 col-sm-6 col-md-3 product">
+			<h6>Guitarra</h6>
+			<img src="img/produto1.jpg" class="img-thumbnail">	
+			<button type="button" class="btn btn-primary">Comprar</button>
+		</div>
+
+	<div class="col-12 col-sm-6 col-md-3 product">
+		<h6>Vinil</h6>
+		<img src="img/produto2.jpg" class="img-thumbnail">
+		<button type="button" class="btn btn-primary">Comprar</button>
+	</div>
+
+	<div class="col-12 col-sm-6 col-md-3 product">
+		<h6>Telefone</h6>
+		<img src="img/produto3.jpg" class="img-thumbnail">
+		<button type="button" class="btn btn-primary">Comprar</button>
+	</div>
+
+	<div class="col-12 col-sm-6 col-md-3 product">
+		<h6>Relógio</h6>
+		<img src="img/produto4.jpg" class="img-thumbnail">
+		<button type="button" class="btn btn-primary">Comprar</button>
+	</div>
+
+	</div><!-- Fim da Row Produtos Promoção-->
+	</section><!--Fim da Seção Promoção-->
+
+	<section class="container custom-container"><!--Seção Mais Vistos-->
+		<div class="row">
+			<div class="col-12 text-center my-3"> <!--Título da Seção-->
+				<h2>Mais Vistos</h2>
+			</div>
+		</div>
+		
+		<div class="row"><!--Row Produtos Mais Vistos-->
+			<div class="col-12 col-sm-6 col-md-3 product">
+				<h6>Guitarra</h6>
+				<img src="img/produto1.jpg" class="img-thumbnail">	
+				<button type="button" class="btn btn-primary">Comprar</button>
+			</div>
+	
+		<div class="col-12 col-sm-6 col-md-3 product">
+			<h6>Vinil</h6>
+			<img src="img/produto2.jpg" class="img-thumbnail">
+			<button type="button" class="btn btn-primary">Comprar</button>
+		</div>
+	
+		<div class="col-12 col-sm-6 col-md-3 product">
+			<h6>Telefone</h6>
+			<img src="img/produto3.jpg" class="img-thumbnail">
+			<button type="button" class="btn btn-primary">Comprar</button>
+		</div>
+	
+		<div class="col-12 col-sm-6 col-md-3 product">
+			<h6>Relógio</h6>
+			<img src="img/produto4.jpg" class="img-thumbnail">
+			<button type="button" class="btn btn-primary">Comprar</button>
+		</div>
+		</div><!-- Fim da Row Produtos Mais Vistos-->
+		</section><!--Fim da Seção Mais Vistos-->
+
+	<!--Plu-glins do Bootstrap-->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
+
 </html>
