@@ -19,7 +19,7 @@
 
     <label for="senha">Senha</label><br>
     <input type="password" name="senha" value="" required><br>
-    <p>* As senha devem ter pelo menos 6 caracteres.</p><br>
+    <p>* As senhas devem ter pelo menos 6 caracteres.</p><br>
 
     <label for="confsenha">Inserir a senha nova mais um vez</label><br>
     <input type="password" name="confsenha" value="" required><br><br>
