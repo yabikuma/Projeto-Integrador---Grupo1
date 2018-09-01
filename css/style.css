@@ -5,6 +5,8 @@
 body{
     font-family: sans-serif;
     font-size: 16px;
+
+
 }
 .container{
     border: 2px solid green;
@@ -14,3 +16,44 @@ body{
     padding: 0;
     margin-top: 10px;
 }
+
+/*HEADER*/
+.navbar {
+  min-height: 80px;
+}
+
+.navbar-header{
+padding-top: 20px;
+}
+
+.navbar-brand {
+  padding: 0 15px;
+  height: 80px;
+  line-height: 80px;
+}
+
+.navbar-nav .nav-link {
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 50px;
+  line-height: 50px;
+}
+
+.navbar-toggle {
+  (80px - button height 34px) / 2 = 23px */
+   margin-top: 23px;
+  padding: 9px 10px !important;
+}
+
+#header-button{
+  margin: :10px;
+}
+
+@media (min-width: 768px) {
+  .navbar-nav > li > a {
+     (80px - line-height of 27px) / 2 = 26.5px */
+     padding-top: 26.5px;
+    padding-bottom: 26.5px;
+    line-height: 27px;
+  } */ */
+ }
