@@ -117,3 +117,12 @@ padding-top: 20px;
     line-height: 27px;
   } */ */
  }
+
+
+body{
+  background-image: url(../img/faq1.jpg);
+}
+
+ .tit{
+   color: white;
+ }
