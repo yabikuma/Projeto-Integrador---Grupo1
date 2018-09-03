@@ -106,7 +106,8 @@ padding-top: 20px;
 }
 
 #header-button{
-  margin: :10px;
+  color:gray;
+  border-color: gray;
 }
 
 @media (min-width: 768px) {
@@ -115,5 +116,14 @@ padding-top: 20px;
      padding-top: 26.5px;
     padding-bottom: 26.5px;
     line-height: 27px;
-  } */ */
+  }
  }
+
+ @media (max-width: 985px) {
+  #header-container{
+    width:100%;
+  }
+  .nav{
+    width:100%;
+  }
+  }

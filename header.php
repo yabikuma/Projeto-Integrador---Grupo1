@@ -26,7 +26,7 @@
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav mx-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#">Home</a>
+        <a class="nav-link" href=index.html>Home</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Quem Somos</a>
@@ -43,17 +43,21 @@
         <a class="dropdown-item" href="#">Brinquedos</a>
       </div>
       </li>
-      
+
       <li class="nav-item">
           <a class="nav-link" href="#">Contato</a>
       </li>
       <li class="nav-item">
-          <a class="nav-link" href="#">FAQ</a>
+          <a class="nav-link" href="faq.php">FAQ</a>
       </li>
     </ul>
     <ul class="nav navbar-nav nav-link ml-auto" id="header-button-list">
-     <button type="submit" class="btn btn-info btn-xs btn-outline-light" id="header-button">Login</button>
-     <button type="submit" class="btn btn-info btn-xs btn-outline-light" id="header-button">Sign in</button>
+     <button type="submit" class="btn btn-info btn-xs btn-outline-light" id="header-button"
+     ><a href=login.php></a>Login
+   </button>
+     <button type="submit" class="btn btn-info btn-xs btn-outline-light" id="header-button"
+     ><a href=cadastro.php></a>Sign in
+   </button>
    </ul>
   </div>
 </nav>
