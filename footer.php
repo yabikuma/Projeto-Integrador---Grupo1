@@ -44,9 +44,7 @@
 			<a class="list-group-item list-group-item-primary btn btn-outline-info" href="">Twitter</a>
 
 		</div>
-		<!-- <div class="btn-group-vertical btn-block btn-group-lg" role="group"> -->
-			
-			
+		
 		</div>
 		</div>				
         </div>

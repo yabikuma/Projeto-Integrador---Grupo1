@@ -8,10 +8,7 @@
   </head>
   <body>
 
-
-
 <div class="container" id="header-container">
-
 
 <nav class="navbar navbar-expand-lg bg-dark navbar-dark navbar-fixed-top">
   <!-- Brand -->
@@ -26,7 +23,7 @@
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav mx-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#">Home</a>
+        <a class="nav-link" href="index.php">Home</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Quem Somos</a>
@@ -48,12 +45,14 @@
           <a class="nav-link" href="#">Contato</a>
       </li>
       <li class="nav-item">
-          <a class="nav-link" href="#">FAQ</a>
+          <a class="nav-link" href="faq.php">FAQ</a>
       </li>
     </ul>
     <ul class="nav navbar-nav nav-link ml-auto" id="header-button-list">
-     <button type="submit" class="btn btn-info btn-xs btn-outline-light" id="header-button">Login</button>
-     <button type="submit" class="btn btn-info btn-xs btn-outline-light" id="header-button">Sign in</button>
+     <button type="submit" class="btn btn-info btn-xs btn-outline-light mr-3 " id="header-button">
+       <a href="login.php">Login</a></button>
+     <button type="submit" class="btn btn-info btn-xs btn-outline-light" id="header-button">
+     <a href="cadastro.php">Sign in</a></button>
    </ul>
   </div>
 </nav>
