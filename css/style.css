@@ -113,7 +113,8 @@ padding-top: 20px;
 }
 
 #header-button{
-  margin: 10px;
+  color:gray;
+  border-color: gray;
 }
 
 @media (min-width: 768px) {
@@ -133,6 +134,7 @@ padding-top: 20px;
  .tit{
    color: white;
  }
+<<<<<<< HEAD
 
 /*CADASTRO*/
 
@@ -153,3 +155,5 @@ padding-top: 20px;
   width: 100%;
   max-width: 500px;
 }
+=======
+>>>>>>> bfffa79af25e7eddc0160c346a87a73915cb0391

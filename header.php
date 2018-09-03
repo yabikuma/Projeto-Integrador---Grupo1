@@ -8,9 +8,12 @@
   </head>
   <body>
 
-<div class="container" id="header-container">
 
-<nav class="navbar navbar-expand-lg bg-dark navbar-dark navbar-fixed-top">
+
+
+
+
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
   <!-- Brand -->
   <a class="navbar-brand mr-auto" href="#"><img src="../Projeto-Integrador---Grupo1/img/Gen-Vintage-logo_claro_small.png" alt="logo-header"></a>
 
@@ -40,7 +43,7 @@
         <a class="dropdown-item" href="#">Brinquedos</a>
       </div>
       </li>
-      
+
       <li class="nav-item">
           <a class="nav-link" href="#">Contato</a>
       </li>
@@ -49,16 +52,21 @@
       </li>
     </ul>
     <ul class="nav navbar-nav nav-link ml-auto" id="header-button-list">
-     <button type="submit" class="btn btn-info btn-xs btn-outline-light mr-3 " id="header-button">
-       <a href="login.php">Login</a></button>
-     <button type="submit" class="btn btn-info btn-xs btn-outline-light" id="header-button">
-     <a href="cadastro.php">Sign in</a></button>
+     <button type="submit" class="btn btn-info btn-xs btn-outline-light" id="header-button"
+     ><a href=login.php></a>Login
+   </button>
+     <button type="submit" class="btn btn-info btn-xs btn-outline-light" id="header-button"
+     ><a href=cadastro.php></a>Sign in
+   </button>
    </ul>
   </div>
 </nav>
 
 
-  </div>
+
+
+
+
 
 <!--Plu-glins do Bootstrap-->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

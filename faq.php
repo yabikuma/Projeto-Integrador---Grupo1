@@ -27,7 +27,7 @@
 
           <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
           <div class="card-body">
-          Fazer compas na GEN-VINTAGE é muito prático e seguro. O primeiro passo é fazer o cadastro em nossa loja. Após o cadstro, entre numa das categorias, selecione os produtos desejados e clique em "Adicionar ao carrinho".
+          Fazer compras na GEN-VINTAGE é muito prático e seguro. O primeiro passo é fazer o cadastro em nossa loja. Após o cadastro, entre numa das categorias, selecione os produtos desejados e clique em "Adicionar ao carrinho".
           Em seguida, você escolhe a forma de pagamento e o endereço de entraga de seu pedido. Após isso, você consegue verificar informações sobre o prazo de entrega.
 
           </div>

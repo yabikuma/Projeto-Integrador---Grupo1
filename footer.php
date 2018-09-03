@@ -17,16 +17,15 @@
 
 <body>
 
-		<footer class="container bg-dark">
-			<div class="row md-3">
-			<div class="col-12 "><hr class="bg-light"></div>
-			<div class="col-sm-4">
-				<h4 class="text-center text-white">Informações</h4>
-				<div class="list-group text-center">
-					<a href="#" class="list-group-item list-group-item-action list-group-item-primary ">Privacidade</a>
-					<a href="#" class="list-group-item list-group-item-action list-group-item-primary ">Contatos</a>
-					<a href="#" class="list-group-item list-group-item-action list-group-item-primary ">Outros</a>
-				</div>
+	<footer class="container bg-dark">
+		<div class="row md-3">
+		<div class="col-12 "><hr class="bg-light"></div>
+		<div class="col-sm-4">
+			<h4 class="text-center text-white">Informações</h4>
+			<div class="list-group text-center">
+				<a href="#" class="list-group-item list-group-item-action list-group-item-primary ">Privacidade</a>
+				<a href="#" class="list-group-item list-group-item-action list-group-item-primary ">Contatos</a>
+				<a href="#" class="list-group-item list-group-item-action list-group-item-primary ">Outros</a>
 			</div>
 			<div class="col-sm-4">
 			<h4 class="text-center text-white" >Produtos</h4>
@@ -47,7 +46,7 @@
 
 			</div>
 
-			
+
 			<div class="col-12 text-center mt-3 bg-primary">
 			<p class="mt-3 text-white">Todos os direitos reservados Gen Vintage 2018</p>
 			</div>
