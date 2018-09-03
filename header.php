@@ -10,10 +10,10 @@
 
 
 
-<div class="container" id="header-container">
 
 
-<nav class="navbar navbar-expand-lg bg-dark navbar-dark navbar-fixed-top">
+
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
   <!-- Brand -->
   <a class="navbar-brand mr-auto" href="#"><img src="../Projeto-Integrador---Grupo1/img/Gen-Vintage-logo_claro_small.png" alt="logo-header"></a>
 
@@ -63,7 +63,10 @@
 </nav>
 
 
-  </div>
+
+
+
+
 
 <!--Plu-glins do Bootstrap-->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
