@@ -69,25 +69,25 @@
 		<div class="row">
 			<!--Row Produtos-->
 			<div class="col-12 col-sm-6 col-md-3 product">
-				<h6>Poduto</h6>
+				<h6>Vinil</h6>
 				<img src="img/vintage1.jpeg" class="img-thumbnail">
 				<button type="button" class="btn btn-primary">Comprar</button>
 			</div>
 
 			<div class="col-12 col-sm-6 col-md-3 product">
-				<h6>Poduto</h6>
+				<h6>Video Games</h6>
 				<img src="img/vintage2.jpeg" class="img-thumbnail">
 				<button type="button" class="btn btn-primary">Comprar</button>
 			</div>
 
 			<div class="col-12 col-sm-6 col-md-3 product">
-				<h6>Poduto</h6>
+				<h6>Moedas</h6>
 				<img src="img/vintage3.jpeg" class="img-thumbnail">
 				<button type="button" class="btn btn-primary">Comprar</button>
 			</div>
 
 			<div class="col-12 col-sm-6 col-md-3 product">
-				<h6>Poduto</h6>
+				<h6>Brinqudos</h6>
 				<img src="img/vintage4.jpeg" class="img-thumbnail">
 				<button type="button" class="btn btn-primary">Comprar</button>
 			</div>
@@ -109,25 +109,25 @@
 		<div class="row">
 			<!--Row Produtos Promoção-->
 			<div class="col-12 col-sm-6 col-md-3 product">
-				<h6>Poduto</h6>
+				<h6>Produto</h6>
 				<img src="img/vintage5.jpeg" class="img-thumbnail">
 				<button type="button" class="btn btn-primary">Comprar</button>
 			</div>
 
 			<div class="col-12 col-sm-6 col-md-3 product">
-				<h6>Poduto</h6>
+				<h6>Produto</h6>
 				<img src="img/vintage6.jpeg" class="img-thumbnail">
 				<button type="button" class="btn btn-primary">Comprar</button>
 			</div>
 
 			<div class="col-12 col-sm-6 col-md-3 product">
-				<h6>Poduto</h6>
+				<h6>Produto</h6>
 				<img src="img/vintage7.jpeg" class="img-thumbnail">
 				<button type="button" class="btn btn-primary">Comprar</button>
 			</div>
 
 			<div class="col-12 col-sm-6 col-md-3 product">
-				<h6>Poduto</h6>
+				<h6>Produto</h6>
 				<img src="img/vintage8.jpeg" class="img-thumbnail">
 				<button type="button" class="btn btn-primary">Comprar</button>
 			</div>
@@ -149,34 +149,38 @@
 		<div class="row">
 			<!--Row Produtos Mais Vistos-->
 			<div class="col-12 col-sm-6 col-md-3 product">
-				<h6>Guitarr</h6>
+				<h6>Produto</h6>
 				<img src="img/vintage9.jpeg" class="img-thumbnail">
 				<button type="button" class="btn btn-primary">Comprar</button>
 			</div>
 
 			<div class="col-12 col-sm-6 col-md-3 product">
-				<h6>Poduto</h6>
+				<h6>Produto</h6>
 				<img src="img/vintage10.jpeg" class="img-thumbnail">
 				<button type="button" class="btn btn-primary">Comprar</button>
 			</div>
 
 			<div class="col-12 col-sm-6 col-md-3 product">
-				<h6>Poduto</h6>
+				<h6>Produto</h6>
 				<img src="img/vintage11.jpeg" class="img-thumbnail">
 				<button type="button" class="btn btn-primary">Comprar</button>
 			</div>
 
 			<div class="col-12 col-sm-6 col-md-3 product">
-				<h6>Poduto</h6>
+				<h6>Produto</h6>
 				<img src="img/vintage12.jpeg" class="img-thumbnail">
 				<button type="button" class="btn btn-primary">Comprar</button>
 			</div>
 		</div>
 		<!-- Fim da Row Produtos Mais Vistos-->
+<?php include 'footer.php' ?>
+
 	</section>
 	<!--Fim da Seção Mais Vistos-->
 
-	<?php include 'footer.php' ?>
+	<?php
+	// include 'footer.php'
+	?>
 
 	<!--Plu-glins do Bootstrap-->
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

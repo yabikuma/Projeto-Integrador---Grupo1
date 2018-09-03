@@ -27,7 +27,7 @@
 
           <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
           <div class="card-body">
-          Fazer compas na GEN-VINTAGE é muito prático e seguro. O primeiro passo é fazer o cadastro em nossa loja. Após o cadstro, entre numa das categorias, selecione os produtos desejados e clique em "Adicionar ao carrinho".
+          Fazer compras na GEN-VINTAGE é muito prático e seguro. O primeiro passo é fazer o cadastro em nossa loja. Após o cadastro, entre numa das categorias, selecione os produtos desejados e clique em "Adicionar ao carrinho".
           Em seguida, você escolhe a forma de pagamento e o endereço de entraga de seu pedido. Após isso, você consegue verificar informações sobre o prazo de entrega.
 
           </div>
@@ -170,10 +170,11 @@
           </div>
           </div>
       </div>
+      <?php include 'footer.php' ?>
       </div>
 
 
-      <?php include 'footer.php' ?>
+      <?php //include 'footer.php' ?>
       <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
