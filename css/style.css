@@ -5,21 +5,18 @@
 body{
     font-family: sans-serif;
     font-size: 16px;
-    background-image: url(../img/faq1.jpg);
-
-
+    background-image: url(../img/fundo-principal.png);
 }
 
 .custom-container h3{
     font-size: 50px;
+    font-weight: 700;
     margin-bottom: 125px;
+    text-transform: uppercase;
+    color: #343a40;
+    background-color: aliceblue;
 }
 
-.custom-container{
-    border: 1px solid red;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
 .product{
     text-align: center;
     margin-bottom: 5px;
@@ -33,7 +30,7 @@ body{
 .loginw {
   padding-top: 250px;
   padding-bottom: 40px;
-  background: url(../img/login1.jpg);
+  background-image: url(../img/login1.jpg);
   /* background-size: 1140px 800px; */
   background-repeat: no-repeat;
   background-position: center;
@@ -79,6 +76,10 @@ body{
 }
 
 /*HEADER*/
+#header-container{
+  text-transform: uppercase;
+
+}
 .navbar {
   min-height: 80px;
 }
@@ -120,8 +121,11 @@ padding-top: 20px;
   }
  }
 
+
+.faqq{
+  background-image: url(../img/faq1.jpg);
+}
+
  .tit{
    color: white;
  }
-
-/*FOOTER*/
