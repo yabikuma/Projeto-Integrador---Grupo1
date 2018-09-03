@@ -81,8 +81,11 @@ label {
 }
 
 /*HEADER*/
-#header-container{
-  text-transform: uppercase;
+
+
+.container-fluid{
+  margin-bottom: 96px;
+  /* text-transform: uppercase; */
 
 }
 
@@ -139,7 +142,6 @@ padding-top: 20px;
  .tit{
    color: white;
  }
-<<<<<<< HEAD
 
 /*CADASTRO*/
 .cadastro{
