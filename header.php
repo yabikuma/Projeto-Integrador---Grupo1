@@ -53,10 +53,10 @@
     </ul>
     <ul class="nav navbar-nav nav-link ml-auto" id="header-button-list">
      <button type="submit" class="btn btn-info btn-xs btn-outline-light" id="header-button"
-     ><a href="login.php"></a>Login
+     ><a href="login.php">Login</a>
    </button>
      <button type="submit" class="btn btn-info btn-xs btn-outline-light" id="header-button"
-     ><a href="cadastro.php"></a>Sign in
+     ><a href="cadastro.php">Sign in</a>
    </button>
    </ul>
   </div>

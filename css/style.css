@@ -85,6 +85,11 @@ label {
   text-transform: uppercase;
 
 }
+
+nav{
+  margin-bottom: 96px;
+
+}
 .navbar {
   min-height: 80px;
 }
@@ -112,9 +117,9 @@ padding-top: 20px;
   padding: 9px 10px !important;
 }
 
-#header-button{
-  color:gray;
-  border-color: gray;
+.header-button{
+  color:green;
+
 }
 
 @media (min-width: 768px) {
