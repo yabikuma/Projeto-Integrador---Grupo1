@@ -1,5 +1,7 @@
 *{
   box-sizing: border-box;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 body{
@@ -28,16 +30,16 @@ body{
 /*login            */
 
 .loginw {
-  padding-top: 250px;
-  padding-bottom: 40px;
+  padding-top: 150px;
+  padding-bottom: 50px;
   background-image: url(../img/login1.jpg);
-  /* background-size: 1140px 800px; */
   background-repeat: no-repeat;
   background-position: center;
   background-size:  100%;
-  /* backgroung-size: cover; */
-  /* background-attachment: fixed; */
-  text-transform:none;
+}
+
+label {
+  margin-bottom: 0px;
 }
 
 .form-signin {
@@ -47,8 +49,11 @@ body{
   margin: 0 auto;
 }
 
-.form-signin .checkbox {
-  font-weight: 400;
+.logintitle {
+  font-size: 45px;
+  color:#343a40;
+  /* color:white; */
+  font-weight: 600;
 }
 
 .form-signin .form-control {
@@ -102,22 +107,22 @@ padding-top: 20px;
 }
 
 .navbar-toggle {
-  (80px - button height 34px) / 2 = 23px */
+  /*(80px - button height 34px) / 2 = 23px */
    margin-top: 23px;
   padding: 9px 10px !important;
 }
 
 #header-button{
-  margin: :10px;
+  margin: 10px;
 }
 
 @media (min-width: 768px) {
   .navbar-nav > li > a {
-     (80px - line-height of 27px) / 2 = 26.5px */
+/*     (80px - line-height of 27px) / 2 = 26.5px */
      padding-top: 26.5px;
     padding-bottom: 26.5px;
     line-height: 27px;
-  } */ */
+  }
  }
 
 
@@ -129,3 +134,22 @@ padding-top: 20px;
    color: white;
  }
 
+/*CADASTRO*/
+
+.cadastro{
+  padding-top: 10px;
+  padding-bottom: 100px;
+  background-image: url(../img/cadastro.jpg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size:  100%;
+  text-align: center;
+  color: white;
+}
+
+.cadastroform {
+  text-align: left;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 500px;
+}
