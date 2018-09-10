@@ -156,3 +156,16 @@ padding-top: 20px;
   width: 100%;
   max-width: 500px;
 }
+
+
+.upl{
+  padding-top: 10px;
+  padding-bottom: 430px;
+  background-image: url(../img/upload01.jpg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size:  100%;
+  text-align: center;
+  color: white;
+  font-size: 17px;
+}

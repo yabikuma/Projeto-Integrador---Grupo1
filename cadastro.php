@@ -1,3 +1,23 @@
+<?php
+if ($_FILES['arquivo']['error']=== UPLOAD_ERR_OK) {
+  $caminho = "Projeto-Integrador---Grupo1".$_FILES['arquivo']['name'];
+  if (file_exists($caminho)) {
+    echo "ERRO: arquivo já existe";
+  }else{
+    $ok = move_uploaded_file($_FILES['arquivo']['tmp_name'], $caminho);
+    if($ok){
+      echo "Arquivo enviado com sucesso!";
+    }
+  }
+}
+
+
+ ?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="pt" dir="ltr">
   <head>
@@ -47,6 +67,15 @@
     <br>  <br>
 
     <button class="btn btn-primary form-control" type="submit">Criar sua senha na GenVintage</button>
+
+  </form>
+
+
+
+  <form class="uploadimg" action="upload.php" method="post" enctype="multipart/form-data"><br>
+    <label class= "p-3 mb-2 bg-dark text-white.bg-dark" for="arquivo">Adicionar foto de perfil</label><br><br>
+    <input type="file" class="btn btn-dark" name="arquivo" id="arquivo"><br><br>
+    <button type="submit" class="btn btn-dark">Enviar</button>
 
   </form>
 
