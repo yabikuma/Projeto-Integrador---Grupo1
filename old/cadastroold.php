@@ -1,17 +1,3 @@
-<?php
-if ($_FILES['arquivo']['error']=== UPLOAD_ERR_OK) {
-  $caminho = "Projeto-Integrador---Grupo1".$_FILES['arquivo']['name'];
-  if (file_exists($caminho)) {
-    echo "ERRO: arquivo já existe";
-  }else{
-    $ok = move_uploaded_file($_FILES['arquivo']['tmp_name'], $caminho);
-    if($ok){
-      echo "Arquivo enviado com sucesso!";
-    }
-  }
-}
- ?>
-
 <!DOCTYPE html>
 <html lang="pt" dir="ltr">
   <head>
@@ -25,12 +11,15 @@ if ($_FILES['arquivo']['error']=== UPLOAD_ERR_OK) {
 <body>
   <?php include 'header.php'?>
 
+
 <div class="container">
+
 
 <div class="cadastro">
   <h1 id=topo>Criar Conta</h1>
 
-  <form class="cadastroform" action="upload.php" method="post"  enctype="multipart/form-data">
+  <form class="cadastroform" action="cadastro.php" method="post">
+
 
     <label for="nome">Seu nome</label><br>
     <input class="form-control" type="text" name="nome" value="" required><br>
@@ -45,30 +34,23 @@ if ($_FILES['arquivo']['error']=== UPLOAD_ERR_OK) {
     <label for="confsenha">Inserir a senha nova mais um vez</label><br>
     <input class="form-control" type="password" name="confsenha" value="" required><br>
 
-    <!-- <label class= "p-3 mb-2 bg-dark text-white.bg-dark" for="arquivo">Adicionar foto de perfil</label><br><br> -->
-    <input type="file" class="btn btn-primary form-control" name="arquivo" id="arquivo"><br><br>
-
-
     <label>Preferências:</label><br>
     <input type="checkbox" name="preferencias" id="moedas" value="moedas">
-    <label for="musica">Moedas</label>
+    <label for="moedas">Moedas</label>
     <input type="checkbox" name="preferencias" id="vinil" value="vinil">
-    <label for="jogos">Vinil</label>
+    <label for="vinil">Vinil</label>
     <input type="checkbox" name="preferencias" id="videogames" value="videogames">
-    <label for="leitura">Video Games</label>
+    <label for="videogames">Video Games</label>
     <input type="checkbox" name="preferencias" id="brinquedos" value="brinquedos">
-    <label for="leitura">Brinquedos</label><br><br>
+    <label for="brinquedos">Brinquedos</label>
+
+    <br>  <br>
 
     <button class="btn btn-primary form-control" type="submit">Criar sua senha na GenVintage</button>
 
   </form>
 
-    <!-- <form class="uploadimg" action="upload.php" method="post" enctype="multipart/form-data"><br>
-      <label class= "p-3 mb-2 bg-dark text-white.bg-dark" for="arquivo">Adicionar foto de perfil</label><br><br>
-      <input type="file" class="btn btn-dark" name="arquivo" id="arquivo"><br><br>
-    <button type="submit" class="btn btn-dark">Enviar</button>
 
-  </form> -->
 
 </div>
 <?php include 'footer.php' ?>
