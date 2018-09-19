@@ -1,3 +1,18 @@
+<?php
+
+session_start();
+
+if(isset($_POST['senha'])){
+  if($_POST['senha']){
+    header("Location:\Projeto-Integrador---Grupo1\index.php");
+  }
+}
+
+ ?>
+
+
+
+
 <!DOCTYPE html>
 <html>
 
