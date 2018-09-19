@@ -10,6 +10,57 @@ if ($_FILES['arquivo']['error']=== UPLOAD_ERR_OK) {
     }
   }
 }
+
+
+if ($_POST) {
+
+  // CRIAR ARQUIVO COM OS DADOS DOS USUÁRIOS SALVOS NO FORMULÁRIO - ok, validado
+  $local_file = "usuarios.json";
+  if (file_exists($local_file)){
+    $conteudo = file_get_contents ("$local_file");
+    $conteudo_array = json_decode ($conteudo, true);
+  } else {
+    $conteudo_array = [
+      "usuarios" => []
+    ];
+  }
+
+
+// VALIDAR O PREENCHIMENTO DO FORMULÁRIO - ok, validado!
+  $msg_error = [];
+  foreach ($_POST as $key => $value) {
+    if ($value == ""){
+      $msg_error[] = "Campo '$key' em branco";
+    }
+  }
+
+  if($_POST['senha'] != $_POST['confsenha']){
+    $msg_error[] = "Senhas não conferem!";
+  }
+
+
+// VALIDAR SE O USUÁRIO JÁ EXISTE, UTILIZANDO O CAMPO E-MAIL
+$validacao = $conteudo_array['usuarios'];
+if ($validacao !== null) {
+foreach ($validacao as $key => $value) {
+    if ($validacao[$key]['email'] === $_POST['email']) {
+    $msg_error[] = "Já existe um cadastro em nossa base com esse e-mail!";
+    break;
+    }
+  }
+}
+
+    // CARREGAR OS DADOS DO FORMULÁRIO CUMULATIVAMENTE(NA ÚLTIMA POSIÇÃO)
+    // E SALVAR O ARQUIVO ACUMULADO NO ARQUIVO JSON ONDE TEM TODOS OS USUÁRIOS
+  if (empty($msg_error)){
+      $conteudo_array ["usuarios"][] = $_POST;
+      $conteudo = json_encode($conteudo_array);
+      file_put_contents($local_file, $conteudo);
+      header('Location: validacao.php');
+      }
+}
+
+
  ?>
 
 <!DOCTYPE html>
@@ -25,44 +76,58 @@ if ($_FILES['arquivo']['error']=== UPLOAD_ERR_OK) {
 <body>
   <?php include 'header.php'?>
 
+
+
+
 <div class="container">
 
 <div class="cadastro">
-  <h1 id=topo>Criar Conta</h1>
 
-  <form class="cadastroform" action="upload.php" method="post"  enctype="multipart/form-data">
+    <h1 id=topo>Criar Conta</h1>
+
+    <!-- IMPRIME NA TELA A VALIDAÇÃO DE PREENCHIMENTO DO FORMULÁRIO -->
+    <div class="error">
+      <?php
+        if (isset($msg_error) && count($msg_error)) {
+          echo implode ("<br>", $msg_error);
+        }
+      ?>
+    </div>
+
+
+  <form class="cadastroform" action="cadastro.php" method="post"  enctype="multipart/form-data">
 
     <label for="nome">Seu nome</label><br>
-    <input class="form-control" type="text" name="nome" value="" required><br>
+    <input class="form-control" type="text" name="nome" value='<?php echo isset($_POST['nome'])?$_POST['nome']:''; ?>'>
 
     <label for="email">E-mail</label><br>
-    <input class="form-control" type="text" name="email" value="" required><br>
+    <input class="form-control" type="text" name="email" value='<?php echo isset($_POST['email'])?$_POST['email']:''; ?>'>
 
     <label for="senha">Senha</label><br>
-    <input class="form-control" type="password" name="senha" value="" required>
-    <p>* As senhas devem ter pelo menos 6 caracteres.</p>
+    <input class="form-control" type="password" name="senha" value='<?php echo isset($_POST['senha'])?$_POST['senha']:''; ?>'>
+    <!-- <p>* As senhas devem ter pelo menos 6 caracteres.</p> -->
 
     <label for="confsenha">Inserir a senha nova mais um vez</label><br>
-    <input class="form-control" type="password" name="confsenha" value="" required><br>
+    <input class="form-control" type="password" name="confsenha" value='<?php echo isset($_POST['confsenha'])?$_POST['confsenha']:''; ?>' ><br>
 
     <!-- <label class= "p-3 mb-2 bg-dark text-white.bg-dark" for="arquivo">Adicionar foto de perfil</label><br><br> -->
-    <input type="file" class="btn btn-primary form-control" name="arquivo" id="arquivo"><br><br>
-
+    <input type="file" class="btn btn-primary form-control" name="arquivo" id="arquivo" value="" placeholder="Adicionar foto de perfil"><br>
 
     <label>Preferências:</label><br>
     <input type="checkbox" name="preferencias" id="moedas" value="moedas">
-    <label for="musica">Moedas</label>
+    <label for="moedas">Moedas</label>
     <input type="checkbox" name="preferencias" id="vinil" value="vinil">
-    <label for="jogos">Vinil</label>
+    <label for="vinil">Vinil</label>
     <input type="checkbox" name="preferencias" id="videogames" value="videogames">
-    <label for="leitura">Video Games</label>
+    <label for="videogames">Video Games</label>
     <input type="checkbox" name="preferencias" id="brinquedos" value="brinquedos">
-    <label for="leitura">Brinquedos</label><br><br>
+    <label for="brinquedos">Brinquedos</label><br>
 
     <button class="btn btn-primary form-control" type="submit">Criar sua senha na GenVintage</button>
 
-  </form>
 
+
+  </form>
     <!-- <form class="uploadimg" action="upload.php" method="post" enctype="multipart/form-data"><br>
       <label class= "p-3 mb-2 bg-dark text-white.bg-dark" for="arquivo">Adicionar foto de perfil</label><br><br>
       <input type="file" class="btn btn-dark" name="arquivo" id="arquivo"><br><br>
