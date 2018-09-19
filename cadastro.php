@@ -15,7 +15,7 @@ if ($_FILES['arquivo']['error']=== UPLOAD_ERR_OK) {
 if ($_POST) {
 
   // CRIAR ARQUIVO COM OS DADOS DOS USUÁRIOS SALVOS NO FORMULÁRIO - ok, validado
-  $local_file = "usuarios.json";
+  $local_file = "usuario.json";
   if (file_exists($local_file)){
     $conteudo = file_get_contents ("$local_file");
     $conteudo_array = json_decode ($conteudo, true);
