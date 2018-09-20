@@ -1,6 +1,6 @@
 <?php
 if ($_FILES['arquivo']['error']=== UPLOAD_ERR_OK) {
-  $caminho = "Projeto-Integrador---Grupo1".$_FILES['arquivo']['name'];
+  $caminho = "img/usuario/".$_FILES['arquivo']['name'];
   if (file_exists($caminho)) {
     echo "ERRO: arquivo já existe";
   }else{
@@ -53,7 +53,15 @@ foreach ($validacao as $key => $value) {
     // CARREGAR OS DADOS DO FORMULÁRIO CUMULATIVAMENTE(NA ÚLTIMA POSIÇÃO)
     // E SALVAR O ARQUIVO ACUMULADO NO ARQUIVO JSON ONDE TEM TODOS OS USUÁRIOS
   if (empty($msg_error)){
-      $conteudo_array ["usuarios"][] = $_POST;
+
+//$id = count($conteudo_array ["usuarios"])
+
+      $conteudo_array ["usuarios"][] = [
+            "nome" => $_POST['nome'],
+            "email" => $_POST['email'],
+            'senha'=>password_hash($_POST['senha'], PASSWORD_DEFAULT),
+            "preferencias" => $_POST['preferencias']
+          ];
       $conteudo = json_encode($conteudo_array);
       file_put_contents($local_file, $conteudo);
       header('Location: validacao.php');
@@ -114,13 +122,15 @@ foreach ($validacao as $key => $value) {
     <input type="file" class="btn btn-primary form-control" name="arquivo" id="arquivo" value="" placeholder="Adicionar foto de perfil"><br>
 
     <label>Preferências:</label><br>
-    <input type="checkbox" name="preferencias" id="moedas" value="moedas">
+
+
+    <input type="checkbox" name="preferencias[]" id="moedas" value="moedas">
     <label for="moedas">Moedas</label>
-    <input type="checkbox" name="preferencias" id="vinil" value="vinil">
+    <input type="checkbox" name="preferencias[]" id="vinil" value="vinil">
     <label for="vinil">Vinil</label>
-    <input type="checkbox" name="preferencias" id="videogames" value="videogames">
+    <input type="checkbox" name="preferencias[]" id="videogames" value="videogames">
     <label for="videogames">Video Games</label>
-    <input type="checkbox" name="preferencias" id="brinquedos" value="brinquedos">
+    <input type="checkbox" name="preferencias[]" id="brinquedos" value="brinquedos">
     <label for="brinquedos">Brinquedos</label><br>
 
     <button class="btn btn-primary form-control" type="submit">Criar sua senha na GenVintage</button>

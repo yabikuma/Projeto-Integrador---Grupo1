@@ -140,7 +140,10 @@ padding-top: 20px;
 
 /*CADASTRO*/
 .error {
-  color: red;
+  color: white;
+  background-color:#343a40;
+  width: 200px;
+  text-align: center;
 }
 
 .cadastro{

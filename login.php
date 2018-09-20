@@ -1,39 +1,34 @@
 <?php
 
- session_start();
+    session_start();
 
 if($_POST){
-
-
   if(isset($_POST['email']) && isset($_POST['senha'])){
     $arqJson = "usuario.json";
     $conteudo = file_get_contents($arqJson);
+
+    echo $conteudo;
+
     $jsonParaArray = json_decode($conteudo, true);
 
+    foreach ($jsonParaArray as $usuario) {
 
-  foreach ($jsonParaArray as $usuario) {
-
-    foreach($usuario as $dados){
-        if($_POST['email'] === $dados['email'] && $_POST['senha']===$dados['senha']){
-
+      //vamos criptografar a senha
+      if($_POST['email'] === $usuario['email'] && $_POST['senha']===$usuario['senha']){
           $_SESSION['usuarioLogado'] = true;
-          $_SESSION['nomeUsuario'] = $dados["nome"];
-          $_SESSION['emailUsuario'] = $dados["email"];
-
-      if(isset($_POST['lembrarUsuario'])) {
-            setcookie("email", $_POST ["email"]);
-              }else{
-
-
-            setcookie('email', '', time()-3600);
-                }
-                 header('location:\Projeto-Integrador---Grupo1\index.php');
-              }
+          $_SESSION['nomeUsuario'] = $usuario["nome"];
+          $_SESSION['emailUsuario'] = $usuario["email"];
+          if(isset($_POST['lembrarUsuario'])) {
+              setcookie("email", $_POST ["email"]);
+          } else {
+              setcookie('email', '', time()-3600);
           }
+          header('location:index.php');
         }
-
-      }
     }
+  }
+
+}
 
  ?>
 
@@ -58,9 +53,10 @@ if($_POST){
 
     <div class="text-center loginw">
 
-      <form class="form-signin" action="index.php" method="post">
+      <form class="form-signin" action="login.php" method="post">
         <!-- <h1 class="h3 font-weight-normal">Fazer Login</h1> -->
         <h1 class="logintitle">Fazer Login</h1>
+
         <label for="inputEmail" class="sr-only">Email</label>
         <input type="email" id="inputEmail" class="form-control mb-4" value="<?php echo @$_COOKIE["email"];?>" placeholder="E-mail" required autofocus>
         <label for="inputPassword" class="sr-only">Senha</label>
