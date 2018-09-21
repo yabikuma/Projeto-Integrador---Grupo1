@@ -1,3 +1,39 @@
+<?php
+
+    session_start();
+
+if($_POST){
+  if(isset($_POST['email']) && isset($_POST['senha'])){
+    $arqJson = "usuario.json";
+    $conteudo = file_get_contents($arqJson);
+
+    echo $conteudo;
+
+    $jsonParaArray = json_decode($conteudo, true);
+
+    foreach ($jsonParaArray as $usuario) {
+
+      //vamos criptografar a senha
+      if($_POST['email'] === $usuario['email'] && $_POST['senha']===$usuario['senha']){
+          $_SESSION['usuarioLogado'] = true;
+          $_SESSION['nomeUsuario'] = $usuario["nome"];
+          $_SESSION['emailUsuario'] = $usuario["email"];
+          if(isset($_POST['lembrarUsuario'])) {
+              setcookie("email", $_POST ["email"]);
+          } else {
+              setcookie('email', '', time()-3600);
+          }
+          header('location:index.php');
+        }
+    }
+  }
+
+}
+
+ ?>
+
+
+
 <!DOCTYPE html>
 <html lang="pt" dir="ltr">
   <head>
@@ -9,30 +45,33 @@
   </head>
 
   <body>
+    <?php include 'header.php'?>
 
-        <?php include 'header.php'?>
-
-<div class="container">
+    <div class="container">
 
     <div class="text-center loginw">
 
-      <form class="form-signin">
+      <form class="form-signin" action="login.php" method="post">
         <!-- <h1 class="h3 font-weight-normal">Fazer Login</h1> -->
         <h1 class="logintitle">Fazer Login</h1>
+
         <label for="inputEmail" class="sr-only">Email</label>
-        <input type="email" id="inputEmail" class="form-control mb-4" placeholder="Email" required autofocus>
+        <input type="email" id="inputEmail" class="form-control mb-4" value="<?php echo @$_COOKIE["email"];?>" placeholder="E-mail" required autofocus>
         <label for="inputPassword" class="sr-only">Senha</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required>
+        <input type="password" id="inputPassword" class="form-control" value="<?php echo @$_COOKIE["nome"];?>" placeholder="Senha" required>
         <div class="checkbox mb-3">
           <label>
             <input type="checkbox" value="remember-me"> Lembre-me
           </label>
         </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Continuar</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
         <!-- <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p> -->
-      </form>
 
-    </div>
+
+      </form>
+      </div>
+
+
 
 <?php include 'footer.php' ?>
   </div>

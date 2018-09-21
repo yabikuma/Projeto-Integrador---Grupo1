@@ -1,3 +1,13 @@
+<?php
+
+session_start();
+
+
+ ?>
+
+
+
+
 <!DOCTYPE html>
 <html>
 
@@ -88,7 +98,7 @@
 			</div>
 
 			<div class="col-12 col-sm-6 col-md-3 product">
-				<h6>Brinqudos</h6>
+				<h6>Brinquedos</h6>
 				<img src="img/vintage4.jpeg" class="img-thumbnail">
 				<button type="button" class="btn btn-primary">Comprar</button>
 			</div>
