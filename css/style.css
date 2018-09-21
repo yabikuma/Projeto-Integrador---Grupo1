@@ -27,61 +27,7 @@ body{
     margin: 12px;
 }
 
-/*login            */
-
-.loginw {
-  padding-top: 150px;
-  padding-bottom: 50px;
-  background-image: url(../img/login1.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size:  100%;
-}
-
-label {
-  margin-bottom: 0px;
-}
-
-.form-signin {
-  width: 100%;
-  max-width: 330px;
-  padding: 15px;
-  margin: 0 auto;
-}
-
-.logintitle {
-  font-size: 45px;
-  color:#343a40;
-  /* color:white; */
-  font-weight: 600;
-}
-
-.form-signin .form-control {
-  position: relative;
-  box-sizing: border-box;
-  height: auto;
-  padding: 10px;
-  font-size: 16px;
-}
-
-.form-signin .form-control:focus {
-  z-index: 2;
-}
-
-.form-signin input[type="email"] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
-
-.form-signin input[type="password"] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-
 /*HEADER*/
-
 
 .container-fluid{
   margin-bottom: 96px;
@@ -138,12 +84,101 @@ padding-top: 20px;
    color: white;
  }
 
+ /*login            */
+
+ .loginw {
+   padding-top: 150px;
+   padding-bottom: 50px;
+   background-image: url(../img/login1.jpg);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size:  100%;
+ }
+
+ label {
+   margin-bottom: 0px;
+ }
+
+ .form-signin {
+   width: 100%;
+   max-width: 330px;
+   padding: 15px;
+   margin: 0 auto;
+ }
+
+ .logintitle {
+   font-size: 45px;
+   color:#343a40;
+   font-weight: 600;
+ }
+
+ .form-signin .form-control {
+   position: relative;
+   box-sizing: border-box;
+   height: auto;
+   padding: 10px;
+   font-size: 16px;
+ }
+
+ .form-signin .form-control:focus {
+   z-index: 2;
+ }
+
+ .form-signin input[type="email"] {
+   margin-bottom: -1px;
+   border-bottom-right-radius: 0;
+   border-bottom-left-radius: 0;
+ }
+
+ .form-signin input[type="password"] {
+   margin-bottom: 10px;
+   border-top-left-radius: 0;
+   border-top-right-radius: 0;
+ }
+
+
 /*CADASTRO*/
+.container{
+  margin-top: 0;
+}
+
 .error {
   color: white;
-  background-color:#343a40;
-  width: 200px;
-  text-align: center;
+  background-color:#d7254c;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding:15px 0;
+  /* width: 200px; */
+  /* text-align: center; */
+}
+
+.form-control {
+  outline-color:#ad8056 !important;
+}
+
+.botao {
+  /* background-color:#ad8056; */
+  background-color:#c48f5b;
+
+  /* color: #343a40; */
+  color: black;
+}
+
+.botao:hover {
+  /* background-color:#ae7f45; */
+  background-color:#885a36;
+  font-weight: bold;
+}
+
+.botao:active{
+  background-color:#ae7f45;
+}
+
+.botaoEntrar{
+  background-color:#d5cacf;
+  padding: 15px;
+  border-radius: 10px;
+  color: black;
 }
 
 .cadastro{
