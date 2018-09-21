@@ -10,7 +10,6 @@ body{
     background-image: url(../img/fundo-principal.png);
 }
 
-
 .custom-container h3{
     font-size: 27px;
     font-weight: 700;
@@ -23,8 +22,6 @@ body{
 
 .row-title{
 font-family: rye,cursive;
-
-
 }
 
 .box-title{
@@ -107,7 +104,6 @@ label {
 .container-fluid{
   margin-bottom: 96px;
   /* text-transform: uppercase; */
-
 }
 
 nav{
@@ -140,7 +136,7 @@ padding-top: 20px;
 
 .navbar-toggle {
   /*(80px - button height 34px) / 2 = 23px */
-   margin-top: 23px;
+  margin-top: 23px;
   padding: 9px 10px !important;
 }
 
@@ -150,7 +146,8 @@ padding-top: 20px;
 }
 .header-button-text{
   color: white;
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
+  font-family: 'Fredericka the Great', cursive;
 }
 
 @media (min-width: 768px) {
@@ -162,6 +159,18 @@ padding-top: 20px;
   }
  }
 
+.dropdown-menu.show {
+  background-color: #343a40;
+}
+
+.dropdown-item {
+  color: rgba(255,255,255,.5);
+}
+
+/* .dropdown-item {
+  background-color: red;
+  color: rgba(255,255,255,.5);
+} */
 
 .faqq{
   background-image: url(../img/faq1.jpg);
