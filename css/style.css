@@ -10,13 +10,26 @@ body{
     background-image: url(../img/fundo-principal.png);
 }
 
+
 .custom-container h3{
-    font-size: 50px;
+    font-size: 27px;
     font-weight: 700;
-    margin-bottom: 125px;
-    text-transform: uppercase;
+    margin-top: 125px;
+    padding: 10px;
     color: #343a40;
-    background-color: aliceblue;
+    background-color: rgba(232, 232, 232, 0.26);
+    font-family: 'Diplomata', regular;
+}
+
+.row-title{
+font-family: rye,cursive;
+
+
+}
+
+.box-title{
+font-family: rye,cursive;
+font-size: 20px;
 }
 
 .product{
@@ -25,6 +38,15 @@ body{
 }
 .row button{
     margin: 12px;
+}
+
+.btn-primary{
+  background-color: grey;
+  border: none;
+}
+
+.btn-primary:hover{
+  background-color: black;
 }
 
 /*login            */
@@ -95,6 +117,8 @@ nav{
 }
 .navbar {
   min-height: 80px;
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 30px;
 }
 
 .navbar-header{
@@ -112,6 +136,7 @@ padding-top: 20px;
   padding-bottom: 0;
   height: 50px;
   line-height: 50px;
+  margin-left: 20px;
 }
 
 .navbar-toggle {
@@ -123,6 +148,10 @@ padding-top: 20px;
 .header-button{
   color:green;
 
+}
+.header-button-text{
+  color: white;
+  font-family: sans-serif;
 }
 
 @media (min-width: 768px) {

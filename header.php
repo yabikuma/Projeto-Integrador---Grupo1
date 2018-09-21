@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
   </head>
   <body>
 <div class="container-fluid">
@@ -50,10 +51,10 @@
     </ul>
     <ul class="nav navbar-nav nav-link ml-auto" id="header-button-list">
     <button type="submit" class="btn btn-info btn-xs btn-outline-light" id="header-button"
-     ><a href="login.php">Login</a>
+     ><a class="header-button-text" href="login.php">Login</a>
     </button>
      <button type="submit" class="btn btn-info btn-xs btn-outline-light" id="header-button"
-     ><a href="cadastro.php">Sign in</a>
+     ><a class="header-button-text" href="cadastro.php">Sign in</a>
    </button>
    </ul>
   </div>
