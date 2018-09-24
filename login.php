@@ -2,6 +2,7 @@
 
     session_start();
 
+
 if($_POST){
   if(isset($_POST['email']) && isset($_POST['senha'])){
     $arqJson = "usuario.json";
@@ -14,10 +15,10 @@ if($_POST){
     foreach ($jsonParaArray as $usuario) {
 
       //vamos criptografar a senha
-      if($_POST['email'] === $usuario['email'] && $_POST['senha']===$usuario['senha']){
-          $_SESSION['usuarioLogado'] = true;
-          $_SESSION['nomeUsuario'] = $usuario["nome"];
-          $_SESSION['emailUsuario'] = $usuario["email"];
+      if($_POST["email"] === $usuarioNome && password_verify($_POST["senha"], $usuarioSenha)){
+          $_SESSION["login"] = true;
+          $_SESSION["login"] = $usuarioNome["email"];
+          $_SESSION["login"] = $usuarioSenha["senha"];
           if(isset($_POST['lembrarUsuario'])) {
               setcookie("email", $_POST ["email"]);
           } else {
@@ -58,9 +59,9 @@ if($_POST){
         <h1 class="logintitle">Fazer Login</h1>
 
         <label for="inputEmail" class="sr-only">Email</label>
-        <input type="email" id="inputEmail" class="form-control mb-4" value="<?php echo @$_COOKIE["email"];?>" placeholder="E-mail" required autofocus>
+        <input type="email" id="inputEmail" class="form-control mb-4" name = "email" value= "<?php echo @$_COOKIE["email"];?>" placeholder="E-mail" required autofocus>
         <label for="inputPassword" class="sr-only">Senha</label>
-        <input type="password" id="inputPassword" class="form-control" value="<?php echo @$_COOKIE["nome"];?>" placeholder="Senha" required>
+        <input type="password" id="inputPassword" class="form-control" name = "senha" value= "<?php echo @$_COOKIE["senha"];?>" placeholder="Senha" required>
         <div class="checkbox mb-3">
           <label>
             <input type="checkbox" value="remember-me"> Lembre-me
