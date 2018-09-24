@@ -39,7 +39,6 @@ if($_POST){
 <html lang="pt" dir="ltr">
   <head>
     <meta charset="utf-8">
-
     <title>Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -47,10 +46,9 @@ if($_POST){
   </head>
 
   <body>
+    <?php include 'header.php'?>
 
-        <?php include 'header.php'?>
-
-<div class="container">
+    <div class="container">
 
     <div class="text-center loginw">
 

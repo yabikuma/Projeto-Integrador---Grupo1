@@ -1,13 +1,16 @@
 <?php
+
+session_start();
+
 if ($_FILES['arquivo']['error']=== UPLOAD_ERR_OK) {
-  $caminho = "img/usuario/".$_FILES['arquivo']['name'];
+  $caminho = "img/usuario/". time() . $_FILES['arquivo']['name'];
   if (file_exists($caminho)) {
-    echo "ERRO: arquivo já existe";
+    // echo "ERRO: arquivo já existe";
   }else{
     $ok = move_uploaded_file($_FILES['arquivo']['tmp_name'], $caminho);
-    if($ok){
-      echo "Arquivo enviado com sucesso!";
-    }
+    // if($ok){
+    //   echo "Arquivo enviado com sucesso!";
+    // }
   }
 }
 
@@ -39,6 +42,8 @@ if ($_POST) {
   }
 
 
+
+
 // VALIDAR SE O USUÁRIO JÁ EXISTE, UTILIZANDO O CAMPO E-MAIL
 $validacao = $conteudo_array['usuarios'];
 if ($validacao !== null) {
@@ -55,15 +60,22 @@ foreach ($validacao as $key => $value) {
   if (empty($msg_error)){
 
 //$id = count($conteudo_array ["usuarios"])
-
-      $conteudo_array ["usuarios"][] = [
+      $dadosusuarios = [
             "nome" => $_POST['nome'],
             "email" => $_POST['email'],
             'senha'=>password_hash($_POST['senha'], PASSWORD_DEFAULT),
-            "preferencias" => $_POST['preferencias']
+            "preferencias" => $_POST['preferencias'],
+            "caminhofoto" => $caminho
           ];
-      $conteudo = json_encode($conteudo_array);
+
+      $conteudo_array ["usuarios"][] = $dadosusuarios;
+
+      $conteudo = json_encode($conteudo_array,JSON_UNESCAPED_SLASHES);
+
       file_put_contents($local_file, $conteudo);
+
+      $_SESSION['nome-usuario'] = $dadosusuarios["nome"];
+
       header('Location: validacao.php');
       }
 }
@@ -84,23 +96,20 @@ foreach ($validacao as $key => $value) {
 <body>
   <?php include 'header.php'?>
 
+  <div class="container">
 
-
-
-<div class="container">
-
-<div class="cadastro">
+  <div class="cadastro">
 
     <h1 id=topo>Criar Conta</h1>
 
     <!-- IMPRIME NA TELA A VALIDAÇÃO DE PREENCHIMENTO DO FORMULÁRIO -->
-    <div class="error">
-      <?php
-        if (isset($msg_error) && count($msg_error)) {
-          echo implode ("<br>", $msg_error);
-        }
-      ?>
-    </div>
+
+      <?php if (isset($msg_error) && count($msg_error)) : ?>
+        <div class="error col-5" >
+          <?php echo implode ("<br>", $msg_error); ?>
+        </div>
+      <?php endif; ?>
+
 
 
   <form class="cadastroform" action="cadastro.php" method="post"  enctype="multipart/form-data">
@@ -119,7 +128,8 @@ foreach ($validacao as $key => $value) {
     <input class="form-control" type="password" name="confsenha" value='<?php echo isset($_POST['confsenha'])?$_POST['confsenha']:''; ?>' ><br>
 
     <!-- <label class= "p-3 mb-2 bg-dark text-white.bg-dark" for="arquivo">Adicionar foto de perfil</label><br><br> -->
-    <input type="file" class="btn btn-primary form-control" name="arquivo" id="arquivo" value="" placeholder="Adicionar foto de perfil"><br>
+
+    <input type="file" class="btn botao form-control" name="arquivo" id="arquivo" value=""><br>
 
     <label>Preferências:</label><br>
 
@@ -133,7 +143,8 @@ foreach ($validacao as $key => $value) {
     <input type="checkbox" name="preferencias[]" id="brinquedos" value="brinquedos">
     <label for="brinquedos">Brinquedos</label><br>
 
-    <button class="btn btn-primary form-control" type="submit">Criar sua senha na GenVintage</button>
+
+    <button class="btn botao form-control" type="submit">Criar sua senha na GenVintage</button>
 
 
 

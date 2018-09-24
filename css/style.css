@@ -11,12 +11,22 @@ body{
 }
 
 .custom-container h3{
-    font-size: 50px;
+    font-size: 27px;
     font-weight: 700;
-    margin-bottom: 125px;
-    text-transform: uppercase;
+    margin-top: 125px;
+    padding: 10px;
     color: #343a40;
-    background-color: aliceblue;
+    background-color: rgba(232, 232, 232, 0.26);
+    font-family: 'Diplomata', regular;
+}
+
+.row-title{
+font-family: rye,cursive;
+}
+
+.box-title{
+font-family: rye,cursive;
+font-size: 20px;
 }
 
 .product{
@@ -25,6 +35,15 @@ body{
 }
 .row button{
     margin: 12px;
+}
+
+.btn-primary{
+  background-color: grey;
+  border: none;
+}
+
+.btn-primary:hover{
+  background-color: black;
 }
 
 /*login            */
@@ -82,14 +101,19 @@ label {
 
 /*HEADER*/
 
-
 .container-fluid{
   margin-bottom: 96px;
   /* text-transform: uppercase; */
+}
+
+nav{
+  margin-bottom: 96px;
 
 }
 .navbar {
   min-height: 80px;
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 30px;
 }
 
 .navbar-header{
@@ -107,17 +131,23 @@ padding-top: 20px;
   padding-bottom: 0;
   height: 50px;
   line-height: 50px;
+  margin-left: 20px;
 }
 
 .navbar-toggle {
   /*(80px - button height 34px) / 2 = 23px */
-   margin-top: 23px;
+  margin-top: 23px;
   padding: 9px 10px !important;
 }
 
-#header-button{
-  color:gray;
-  border-color: gray;
+.header-button{
+  color:green;
+
+}
+.header-button-text{
+  color: white;
+  /* font-family: sans-serif; */
+  font-family: 'Fredericka the Great', cursive;
 }
 
 @media (min-width: 768px) {
@@ -129,6 +159,18 @@ padding-top: 20px;
   }
  }
 
+.dropdown-menu.show {
+  background-color: #343a40;
+}
+
+.dropdown-item {
+  color: rgba(255,255,255,.5);
+}
+
+/* .dropdown-item {
+  background-color: red;
+  color: rgba(255,255,255,.5);
+} */
 
 .faqq{
   background-image: url(../img/faq1.jpg);
@@ -138,12 +180,101 @@ padding-top: 20px;
    color: white;
  }
 
+ /*login            */
+
+ .loginw {
+   padding-top: 150px;
+   padding-bottom: 50px;
+   background-image: url(../img/login1.jpg);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size:  100%;
+ }
+
+ label {
+   margin-bottom: 0px;
+ }
+
+ .form-signin {
+   width: 100%;
+   max-width: 330px;
+   padding: 15px;
+   margin: 0 auto;
+ }
+
+ .logintitle {
+   font-size: 45px;
+   color:#343a40;
+   font-weight: 600;
+ }
+
+ .form-signin .form-control {
+   position: relative;
+   box-sizing: border-box;
+   height: auto;
+   padding: 10px;
+   font-size: 16px;
+ }
+
+ .form-signin .form-control:focus {
+   z-index: 2;
+ }
+
+ .form-signin input[type="email"] {
+   margin-bottom: -1px;
+   border-bottom-right-radius: 0;
+   border-bottom-left-radius: 0;
+ }
+
+ .form-signin input[type="password"] {
+   margin-bottom: 10px;
+   border-top-left-radius: 0;
+   border-top-right-radius: 0;
+ }
+
+
 /*CADASTRO*/
+.container{
+  margin-top: 0;
+}
+
 .error {
   color: white;
-  background-color:#343a40;
-  width: 200px;
-  text-align: center;
+  background-color:#d7254c;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding:15px 0;
+  /* width: 200px; */
+  /* text-align: center; */
+}
+
+.form-control {
+  outline-color:#ad8056 !important;
+}
+
+.botao {
+  /* background-color:#ad8056; */
+  background-color:#c48f5b;
+
+  /* color: #343a40; */
+  color: black;
+}
+
+.botao:hover {
+  /* background-color:#ae7f45; */
+  background-color:#885a36;
+  font-weight: bold;
+}
+
+.botao:active{
+  background-color:#ae7f45;
+}
+
+.botaoEntrar{
+  background-color:#d5cacf;
+  padding: 15px;
+  border-radius: 10px;
+  color: black;
 }
 
 .cadastro{
