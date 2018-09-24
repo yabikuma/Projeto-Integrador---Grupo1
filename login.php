@@ -1,37 +1,37 @@
 <?php
 
-    session_start();
-
+ session_start();
 
 if($_POST){
-  if(isset($_POST['email']) && isset($_POST['senha'])){
-    $arqJson = "usuario.json";
-    $conteudo = file_get_contents($arqJson);
+    if(isset($_POST['email']) && isset($_POST['senha'])){
+      $arqJson = "usuario.json";
+      $conteudo = file_get_contents($arqJson);
+      $jsonParaArray = json_decode($conteudo, true);
 
-    echo $conteudo;
 
-    $jsonParaArray = json_decode($conteudo, true);
+      foreach($jsonParaArray as $usuario){
+              if($_POST["email"] === $usuario && password_verify($_POST["senha"], $usuario)){
+                $_SESSION['usuario-logado'] = true;
+                $_SESSION['email-usuario'] = $usuario["email"];
+                $_SESSION['senha-usuario'] = $usuario["senha"];
 
-    foreach ($jsonParaArray as $usuario) {
+                echo "bem-vindo!";
 
-      //vamos criptografar a senha
-      if($_POST["email"] === $usuarioNome && password_verify($_POST["senha"], $usuarioSenha)){
-          $_SESSION["login"] = true;
-          $_SESSION["login"] = $usuarioNome["email"];
-          $_SESSION["login"] = $usuarioSenha["senha"];
-          if(isset($_POST['lembrarUsuario'])) {
-              setcookie("email", $_POST ["email"]);
-          } else {
-              setcookie('email', '', time()-3600);
-          }
-          header('location:index.php');
-        }
+                if(isset($_POST['lembrarUsuario'])) {
+                  setcookie("email", $_POST ["email"]);
+                }else{
+
+                  setcookie('email', '', time()-3600);
+                }
+                header('Location:login.php');
+              }
+
+      }
     }
-  }
-
 }
 
- ?>
+?>
+
 
 
 
