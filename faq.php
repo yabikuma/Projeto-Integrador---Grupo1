@@ -1,3 +1,7 @@
+<?php
+  session_start();
+ ?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -8,12 +12,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   </head>
 
-  <body class="faqq">
+  <body >
     <?php include 'header.php'?>
 
     <h1 class="text-center tit"> PERGUNTAS FREQUENTES: </h1>
 
-    <div class="container">
+    <div class="container faqq">
 
       <div class="" id="accordion">
         <div class="card">

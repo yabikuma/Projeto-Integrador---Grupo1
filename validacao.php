@@ -1,4 +1,7 @@
-<?php session_start(); ?>
+<?php
+  session_start();
+  $_SESSION['logado']=false;
+?>
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">

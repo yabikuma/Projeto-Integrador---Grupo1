@@ -50,12 +50,20 @@
       </li>
     </ul>
     <ul class="nav navbar-nav nav-link ml-auto" id="header-button-list">
+      <?php if($_SESSION && $_SESSION["logado"]) : ?>
+
+      <?php echo $_SESSION["nome-usuario"];  ?>
+
+      <a href="logout.php">SAIR</a>
+      <?php else: ?>
     <button type="submit" class="btn btn-info btn-xs btn-outline-light" id="header-button"
      ><a class="header-button-text" href="login.php">Login</a>
     </button>
      <button type="submit" class="btn btn-info btn-xs btn-outline-light" id="header-button"
      ><a class="header-button-text" href="cadastro.php">Sign in</a>
    </button>
+ <?php endif; ?>
+
    </ul>
   </div>
 </nav>
