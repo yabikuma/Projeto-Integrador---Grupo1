@@ -2,7 +2,7 @@
 
 session_start();
 
-if ($_FILES['arquivo']['error']=== UPLOAD_ERR_OK) {
+if ($_FILES && $_FILES['arquivo']['error']=== UPLOAD_ERR_OK) {
   $caminho = "img/usuario/". time() . $_FILES['arquivo']['name'];
   if (file_exists($caminho)) {
     // echo "ERRO: arquivo já existe";
@@ -75,6 +75,10 @@ foreach ($validacao as $key => $value) {
       file_put_contents($local_file, $conteudo);
 
       $_SESSION['nome-usuario'] = $dadosusuarios["nome"];
+      $_SESSION['email'] = $dadosusuarios["email"];
+
+      setcookie('email', $_POST['email'], time()+1000);
+      setcookie('senha', $_POST['senha'], time()+1000);
 
       header('Location: validacao.php');
       }
@@ -133,14 +137,17 @@ foreach ($validacao as $key => $value) {
 
     <label>Preferências:</label><br>
 
+    <?php
+    $preferencias = isset($_POST['preferencias'])?$_POST['preferencias']:[];
+    ?>
 
-    <input type="checkbox" name="preferencias[]" id="moedas" value="moedas">
+    <input type="checkbox" name="preferencias[]" id="moedas" value="moedas" <?php echo in_array('moedas', $preferencias)?'checked':''; ?> >
     <label for="moedas">Moedas</label>
-    <input type="checkbox" name="preferencias[]" id="vinil" value="vinil">
+    <input type="checkbox" name="preferencias[]" id="vinil" value="vinil" <?php echo in_array('vinil', $preferencias)?'checked':''; ?> >
     <label for="vinil">Vinil</label>
-    <input type="checkbox" name="preferencias[]" id="videogames" value="videogames">
+    <input type="checkbox" name="preferencias[]" id="videogames" value="videogames" <?php echo in_array('videogames', $preferencias)?'checked':''; ?> >
     <label for="videogames">Video Games</label>
-    <input type="checkbox" name="preferencias[]" id="brinquedos" value="brinquedos">
+    <input type="checkbox" name="preferencias[]" id="brinquedos" value="brinquedos" <?php echo in_array('brinquedos', $preferencias)?'checked':''; ?> >
     <label for="brinquedos">Brinquedos</label><br>
 
 
