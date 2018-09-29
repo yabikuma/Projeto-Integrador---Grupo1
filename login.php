@@ -1,7 +1,6 @@
 <?php
 
-<<<<<<< HEAD
-    session_start();
+    session_start();  
     $_SESSION['logado']=false;
 
     if($_POST){
@@ -39,40 +38,6 @@
                  }
              }
  ?>
-=======
- session_start();
-
-if($_POST){
-    if(isset($_POST['email']) && isset($_POST['senha'])){
-      $arqJson = "usuario.json";
-      $conteudo = file_get_contents($arqJson);
-      $jsonParaArray = json_decode($conteudo, true);
-
-
-      foreach($jsonParaArray as $usuario){
-              if($_POST["email"] === $usuario && password_verify($_POST["senha"], $usuario)){
-                $_SESSION['usuario-logado'] = true;
-                $_SESSION['email-usuario'] = $usuario["email"];
-                $_SESSION['senha-usuario'] = $usuario["senha"];
-
-                echo "bem-vindo!";
-
-                if(isset($_POST['lembrarUsuario'])) {
-                  setcookie("email", $_POST ["email"]);
-                }else{
-
-                  setcookie('email', '', time()-3600);
-                }
-                header('Location:login.php');
-              }
-
-      }
-    }
-}
-
-?>
-
->>>>>>> 7caa431248ae81ec69da85e4671af088f628713a
 
 <!DOCTYPE html>
 <html lang="pt" dir="ltr">
@@ -96,7 +61,6 @@ if($_POST){
         <!-- <h1 class="h3 font-weight-normal">Fazer Login</h1> -->
         <h1 class="logintitle">Fazer Login</h1>
 
-<<<<<<< HEAD
 <?php if($_POST){
 foreach ($erros as $key => $value) {
       echo $value;
@@ -107,12 +71,6 @@ foreach ($erros as $key => $value) {
         <input type="email" name="email" id="inputEmail" class="form-control mb-4" value='<?php echo isset($_COOKIE['email'])?$_COOKIE['email']:''; ?>'  placeholder="E-mail">
 
         <input type="password" name="senha" id="inputPassword" class="form-control" placeholder="Senha" autofocus>
-=======
-        <label for="inputEmail" class="sr-only">Email</label>
-        <input type="email" id="inputEmail" class="form-control mb-4" name = "email" value= "<?php echo @$_COOKIE["email"];?>" placeholder="E-mail" required autofocus>
-        <label for="inputPassword" class="sr-only">Senha</label>
-        <input type="password" id="inputPassword" class="form-control" name = "senha" value= "<?php echo @$_COOKIE["senha"];?>" placeholder="Senha" required>
->>>>>>> 7caa431248ae81ec69da85e4671af088f628713a
         <div class="checkbox mb-3">
           <label>
             <input type="checkbox" name="lembrar-usuario" id="lembrar-usuario"> Lembre-me

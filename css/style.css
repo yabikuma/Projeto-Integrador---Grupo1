@@ -12,12 +12,6 @@ body{
     padding-top: 110px;
 }
 
-/* .fbottom{
-  position: absolute;
-  bottom: 0;
-  width: 80%
-} */
-
 .container.fluir{
   margin: 0!important;
 }
@@ -113,11 +107,6 @@ label {
 
 /*HEADER*/
 
-.container-fluid{
-  /* margin-bottom: 110px; */
-  /* text-transform: uppercase; */
-}
-
 nav{
   margin-bottom: 96px;
 
@@ -179,14 +168,19 @@ padding-top: 20px;
   color: rgba(255,255,255,.5);
 }
 
-
-
 .faqq{
   background-image: url(../img/faq1.jpg);
 }
 
  .tit{
    color: white;
+ }
+
+ .hlogado {
+   font-size: 18px;
+   font-family: 'Fredericka the Great', cursive;
+   color:white;
+
  }
 
  /*login            */
