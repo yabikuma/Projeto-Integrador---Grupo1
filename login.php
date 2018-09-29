@@ -1,10 +1,5 @@
 <?php
-<<<<<<< HEAD
     session_start();
-=======
-
-    session_start();  
->>>>>>> a76fc2b5c8d4dff102e07610739b75656eca4d88
     $_SESSION['logado']=false;
     if($_POST){
        $erros = [];
@@ -55,10 +50,6 @@
       <form class="form-signin" action="login.php" method="post">
         <!-- <h1 class="h3 font-weight-normal">Fazer Login</h1> -->
         <h1 class="logintitle">Fazer Login</h1>
-<<<<<<< HEAD
-=======
-
->>>>>>> a76fc2b5c8d4dff102e07610739b75656eca4d88
 <?php if($_POST){
 foreach ($erros as $key => $value) {
       echo $value;
