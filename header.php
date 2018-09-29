@@ -52,9 +52,9 @@
     <ul class="nav navbar-nav nav-link ml-auto" id="header-button-list">
       <?php if($_SESSION && $_SESSION["logado"]) : ?>
 
-      <?php echo $_SESSION["nome-usuario"];  ?>
+      <p class="hlogado"><?php echo $_SESSION["nome-usuario"];?>
 
-      <a href="logout.php">SAIR</a>
+      <a href="logout.php">SAIR</a></p>
       <?php else: ?>
     <button type="submit" class="btn btn-info btn-xs btn-outline-light" id="header-button"
      ><a class="header-button-text" href="login.php">Login</a>
