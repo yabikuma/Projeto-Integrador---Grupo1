@@ -1,9 +1,6 @@
 <?php
-
-<<<<<<< HEAD
     session_start();
     $_SESSION['logado']=false;
-
     if($_POST){
        $erros = [];
        foreach($_POST as $campo => $valor){
@@ -11,19 +8,16 @@
                $erros[] = "O campo $campo é obrigatório";
            }
        }
-
        if(!count($erros)){
                $usuariosJson = 'usuario.json';
                $usuarios = file_get_contents($usuariosJson);
                $usuarios = json_decode($usuarios, true);
-
                foreach($usuarios['usuarios'] as $key => $user){
                          if($_POST['email'] === $user['email'] && password_verify($_POST['senha'], $user['senha'])){
                              $_SESSION['logado']=true;
                              $_SESSION['id-usuario']=$key;
                              $_SESSION['nome-usuario']=$user['nome'];
                              $_SESSION['foto-usuario'] = $user['caminho'];
-
                              if($_POST['lembrar-usuario']){
                                  setcookie('email', $_POST['email'], time()+1000);
                                  setcookie('senha', $_POST['senha'], time()+1000);
@@ -32,47 +26,12 @@
                                setcookie('senha', '', time()-1000);
                              }
                              header('location: index.php');
-
                          }
                      }
                      $erros[] = "autenticação negada";
                  }
              }
  ?>
-=======
- session_start();
-
-if($_POST){
-    if(isset($_POST['email']) && isset($_POST['senha'])){
-      $arqJson = "usuario.json";
-      $conteudo = file_get_contents($arqJson);
-      $jsonParaArray = json_decode($conteudo, true);
-
-
-      foreach($jsonParaArray as $usuario){
-              if($_POST["email"] === $usuario && password_verify($_POST["senha"], $usuario)){
-                $_SESSION['usuario-logado'] = true;
-                $_SESSION['email-usuario'] = $usuario["email"];
-                $_SESSION['senha-usuario'] = $usuario["senha"];
-
-                echo "bem-vindo!";
-
-                if(isset($_POST['lembrarUsuario'])) {
-                  setcookie("email", $_POST ["email"]);
-                }else{
-
-                  setcookie('email', '', time()-3600);
-                }
-                header('Location:login.php');
-              }
-
-      }
-    }
-}
-
-?>
-
->>>>>>> 7caa431248ae81ec69da85e4671af088f628713a
 
 <!DOCTYPE html>
 <html lang="pt" dir="ltr">
@@ -86,17 +45,11 @@ if($_POST){
 
   <body>
     <?php include 'header.php'?>
-
-
     <div class="container">
-
     <div class="text-center loginw">
-
       <form class="form-signin" action="login.php" method="post">
         <!-- <h1 class="h3 font-weight-normal">Fazer Login</h1> -->
         <h1 class="logintitle">Fazer Login</h1>
-
-<<<<<<< HEAD
 <?php if($_POST){
 foreach ($erros as $key => $value) {
       echo $value;
@@ -107,12 +60,6 @@ foreach ($erros as $key => $value) {
         <input type="email" name="email" id="inputEmail" class="form-control mb-4" value='<?php echo isset($_COOKIE['email'])?$_COOKIE['email']:''; ?>'  placeholder="E-mail">
 
         <input type="password" name="senha" id="inputPassword" class="form-control" placeholder="Senha" autofocus>
-=======
-        <label for="inputEmail" class="sr-only">Email</label>
-        <input type="email" id="inputEmail" class="form-control mb-4" name = "email" value= "<?php echo @$_COOKIE["email"];?>" placeholder="E-mail" required autofocus>
-        <label for="inputPassword" class="sr-only">Senha</label>
-        <input type="password" id="inputPassword" class="form-control" name = "senha" value= "<?php echo @$_COOKIE["senha"];?>" placeholder="Senha" required>
->>>>>>> 7caa431248ae81ec69da85e4671af088f628713a
         <div class="checkbox mb-3">
           <label>
             <input type="checkbox" name="lembrar-usuario" id="lembrar-usuario"> Lembre-me
