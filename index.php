@@ -20,8 +20,9 @@ session_start();
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<!--Fontawesome 5.2.0-->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
   <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Audiowide|Monoton" rel="stylesheet">
 
 </head>
 
@@ -72,32 +73,32 @@ session_start();
 		<div class="row">
 			<div class="col-12 text-center my-3">
 				<!--Título da Seção-->
-				<h2>Categorias</h2>
+				<h2 class="categ">Categorias</h2>
 			</div>
 		</div>
 
 		<div class="row">
 			<!--Row Produtos-->
 			<div class="col-12 col-sm-6 col-md-3 product">
-				<h6>Vinil</h6>
+				<h6 class="prod">Vinil</h6>
 				<img src="img/vintage1.jpeg" class="img-thumbnail">
 				<button type="button" class="btn btn-primary">Comprar</button>
 			</div>
 
 			<div class="col-12 col-sm-6 col-md-3 product">
-				<h6>Video Games</h6>
+				<h6 class="prod">Video Games</h6>
 				<img src="img/vintage2.jpeg" class="img-thumbnail">
 				<button type="button" class="btn btn-primary">Comprar</button>
 			</div>
 
 			<div class="col-12 col-sm-6 col-md-3 product">
-				<h6>Moedas</h6>
+				<h6 class="prod">Moedas</h6>
 				<img src="img/vintage3.jpeg" class="img-thumbnail">
 				<button type="button" class="btn btn-primary">Comprar</button>
 			</div>
 
 			<div class="col-12 col-sm-6 col-md-3 product">
-				<h6>Brinquedos</h6>
+				<h6 class="prod">Brinquedos</h6>
 				<img src="img/vintage4.jpeg" class="img-thumbnail">
 				<button type="button" class="btn btn-primary">Comprar</button>
 			</div>
@@ -112,32 +113,32 @@ session_start();
 		<div class="row">
 			<div class="col-12 text-center my-3">
 				<!--Título da Seção-->
-				<h2>Promoções</h2>
+				<h2 class="categ">Promoções</h2>
 			</div>
 		</div>
 
 		<div class="row">
 			<!--Row Produtos Promoção-->
 			<div class="col-12 col-sm-6 col-md-3 product">
-				<h6>Produto</h6>
+				<h6 class="prod">Video Games</h6>
 				<img src="img/vintage5.jpeg" class="img-thumbnail">
 				<button type="button" class="btn btn-primary">Comprar</button>
 			</div>
 
 			<div class="col-12 col-sm-6 col-md-3 product">
-				<h6>Produto</h6>
+				<h6 class="prod">Brinquedos</h6>
 				<img src="img/vintage6.jpeg" class="img-thumbnail">
 				<button type="button" class="btn btn-primary">Comprar</button>
 			</div>
 
 			<div class="col-12 col-sm-6 col-md-3 product">
-				<h6>Produto</h6>
+				<h6 class="prod">Vinil</h6>
 				<img src="img/vintage7.jpeg" class="img-thumbnail">
 				<button type="button" class="btn btn-primary">Comprar</button>
 			</div>
 
 			<div class="col-12 col-sm-6 col-md-3 product">
-				<h6>Produto</h6>
+				<h6 class="prod">Moedas</h6>
 				<img src="img/vintage8.jpeg" class="img-thumbnail">
 				<button type="button" class="btn btn-primary">Comprar</button>
 			</div>
@@ -152,32 +153,32 @@ session_start();
 		<div class="row">
 			<div class="col-12 text-center my-3">
 				<!--Título da Seção-->
-				<h2>Mais Vistos</h2>
+				<h2 class="categ">Mais Vistos</h2>
 			</div>
 		</div>
 
 		<div class="row">
 			<!--Row Produtos Mais Vistos-->
 			<div class="col-12 col-sm-6 col-md-3 product">
-				<h6>Produto</h6>
+				<h6 class="prod">Vinil</h6>
 				<img src="img/vintage9.jpeg" class="img-thumbnail">
 				<button type="button" class="btn btn-primary">Comprar</button>
 			</div>
 
 			<div class="col-12 col-sm-6 col-md-3 product">
-				<h6>Produto</h6>
+				<h6 class="prod">Video Games</h6>
 				<img src="img/vintage10.jpeg" class="img-thumbnail">
 				<button type="button" class="btn btn-primary">Comprar</button>
 			</div>
 
 			<div class="col-12 col-sm-6 col-md-3 product">
-				<h6>Produto</h6>
+				<h6 class="prod">Brinquedos</h6>
 				<img src="img/vintage11.jpeg" class="img-thumbnail">
 				<button type="button" class="btn btn-primary">Comprar</button>
 			</div>
 
 			<div class="col-12 col-sm-6 col-md-3 product">
-				<h6>Produto</h6>
+				<h6 class="prod">Brinquedos</h6>
 				<img src="img/vintage12.jpeg" class="img-thumbnail">
 				<button type="button" class="btn btn-primary">Comprar</button>
 			</div>

@@ -1,0 +1,330 @@
+*{
+  box-sizing: border-box;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+body{
+    font-family: sans-serif;
+    font-size: 16px;
+    background-image: url(../img/fundo-principal.png);
+    position: relative;
+    padding-top: 110px;
+}
+
+.container.fluir{
+  margin: 0!important;
+}
+
+.custom-container h3{
+    font-size: 27px;
+    font-weight: 700;
+    margin-top: 125px;
+    padding: 10px;
+    color: #343a40;
+    background-color: rgba(232, 232, 232, 0.26);
+    font-family: 'Diplomata', regular;
+}
+
+.row-title{
+font-family: rye,cursive;
+}
+
+.box-title{
+font-family: rye,cursive;
+font-size: 20px;
+}
+
+.product{
+    text-align: center;
+    margin-bottom: 5px;
+}
+.row button{
+    margin: 12px;
+}
+
+.btn-primary{
+  background-color: grey;
+  border: none;
+}
+
+.btn-primary:hover{
+  background-color: black;
+}
+
+/*login            */
+
+.loginw {
+  padding-top: 150px;
+  padding-bottom: 50px;
+  background-image: url(../img/login1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:  100%;
+}
+
+label {
+  margin-bottom: 0px;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.logintitle {
+  font-size: 45px;
+  color:#343a40;
+  /* color:white; */
+  font-weight: 600;
+}
+
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/*HEADER*/
+
+nav{
+  margin-bottom: 96px;
+
+}
+.navbar {
+  min-height: 80px;
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 30px;
+}
+
+.navbar-header{
+padding-top: 20px;
+}
+
+.navbar-brand {
+  padding: 0 15px;
+  height: 80px;
+  line-height: 80px;
+}
+
+.navbar-nav .nav-link {
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 50px;
+  line-height: 50px;
+  margin-left: 20px;
+}
+
+.navbar-toggle {
+  /*(80px - button height 34px) / 2 = 23px */
+  margin-top: 23px;
+  padding: 9px 10px !important;
+}
+
+.header-button{
+  color:green;
+
+}
+.header-button-text{
+  color: white;
+  /* font-family: sans-serif; */
+  font-family: 'Fredericka the Great', cursive;
+}
+
+@media (min-width: 768px) {
+  .navbar-nav > li > a {
+/*     (80px - line-height of 27px) / 2 = 26.5px */
+     padding-top: 26.5px;
+    padding-bottom: 26.5px;
+    line-height: 27px;
+  }
+ }
+
+.dropdown-menu.show {
+  background-color: #343a40;
+}
+
+.dropdown-item {
+  color: rgba(255,255,255,.5);
+}
+
+
+ .hlogado {
+   font-size: 18px;
+   font-family: 'Fredericka the Great', cursive;
+   color:white;
+
+ }
+
+ /*login            */
+
+ .loginw {
+   padding-top: 150px;
+   padding-bottom: 50px;
+   background-image: url(../img/login1.jpg);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size:  100%;
+ }
+
+ label {
+   margin-bottom: 0px;
+ }
+
+ .form-signin {
+   width: 100%;
+   max-width: 330px;
+   padding: 15px;
+   margin: 0 auto;
+ }
+
+ .logintitle {
+   font-size: 45px;
+   color:#343a40;
+   font-weight: 600;
+ }
+
+ .form-signin .form-control {
+   position: relative;
+   box-sizing: border-box;
+   height: auto;
+   padding: 10px;
+   font-size: 16px;
+ }
+
+ .form-signin .form-control:focus {
+   z-index: 2;
+ }
+
+ .form-signin input[type="email"] {
+   margin-bottom: -1px;
+   border-bottom-right-radius: 0;
+   border-bottom-left-radius: 0;
+ }
+
+ .form-signin input[type="password"] {
+   margin-bottom: 10px;
+   border-top-left-radius: 0;
+   border-top-right-radius: 0;
+ }
+
+
+/* CADASTRO */
+/* .container{
+  position: relative;
+  padding-bottom: 320px;
+} */
+
+.error {
+  color: red;
+  /* color: white; */
+  /* background-color:#d7254c; */
+  background-color:white;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding:15px 0;
+  /* width: 200px; */
+  /* text-align: center; */
+}
+
+.form-control {
+  outline-color:#ad8056 !important;
+}
+
+.botao {
+  /* background-color:#ad8056; */
+  background-color:#c48f5b;
+
+  /* color: #343a40; */
+  color: black;
+}
+
+.botao:hover {
+  /* background-color:#ae7f45; */
+  background-color:#885a36;
+  font-weight: bold;
+}
+
+.botao:active{
+  background-color:#ae7f45;
+}
+
+.botaoEntrar{
+  background-color:#d5cacf;
+  padding: 15px;
+  border-radius: 10px;
+  color: black;
+}
+
+.cadastro{
+  padding-top: 10px;
+  padding-bottom: 100px;
+  background-image: url(../img/cadastro.jpg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size:  100%;
+  text-align: center;
+  color: white;
+}
+
+.cadastroform {
+  text-align: left;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 500px;
+}
+
+
+.upl{
+  padding-top: 10px;
+  padding-bottom: 430px;
+  background-image: url(../img/upload01.jpg);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size:  100%;
+  text-align: center;
+  color: white;
+  font-size: 17px;
+}
+
+.faqtitu{
+  font-family: 'Fredericka the Great', cursive;
+  text-align: center;
+}
+
+.pfaq{
+  font-family: 'Fredericka the Great', cursive;
+}
+
+
+.faqtit{
+  color: black;
+  font-family: 'Audiowide', cursive;
+  text-align: center;
+}
+.categ{
+  font-family: 'Fredericka the Great', cursive;
+}
+.prod{
+  font-family: 'Audiowide',cursive;
+}

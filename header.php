@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">
   </head>
   <body>
@@ -49,6 +49,9 @@
           <a class="nav-link" href="faq.php">FAQ</a>
       </li>
     </ul>
+
+      <a class="carrinho" href="index.php"><img src="../Projeto-Integrador---Grupo1/img/carrinho1.png" alt="logo-header"></a>
+
     <ul class="nav navbar-nav nav-link ml-auto" id="header-button-list">
       <?php if($_SESSION && $_SESSION["logado"]) : ?>
 
