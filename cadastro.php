@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+include_once("ClasseCadastro.php");
 
 if ($_FILES && $_FILES['arquivo']['error']=== UPLOAD_ERR_OK) {
   $caminho = "img/usuario/". time() . $_FILES['arquivo']['name'];
@@ -82,6 +83,10 @@ foreach ($validacao as $key => $value) {
 
       header('Location: validacao.php');
       }
+
+
+      // $usuario = new ClasseCadastro($_POST["tipoDePessoa"], $_POST);
+      // $usuario->cadastrarUsuario();
 }
 
 

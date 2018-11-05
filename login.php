@@ -1,5 +1,25 @@
 <?php
     session_start();
+
+    include_once("ClasseLogin.php");
+
+
+    // if($_SERVER["REQUEST_METHOD"] == "POST"){
+    //       $login = new ClasseLogin();
+    //       $login->logar($_POST['email'] , $_POST['senha']);
+    //
+    //       echo 'x';
+    //     } else {
+    //       echo 'deu ruim';
+    //     }
+    //
+    //       if(isset($_GET['error'])){
+    //         echo "<div class='alert alert-danger'>Autenticação negada</div>";
+    //       } elseif(isset($_GET['cadastro'])){
+    //         echo "<div class='alert alert-success'>Cadastro realizado com sucesso</div>";
+    //       }
+
+
     $_SESSION['logado']=false;
     if($_POST){
        $erros = [];
