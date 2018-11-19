@@ -11,7 +11,7 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 
 CREATE TABLE IF NOT EXISTS `mydb`.`clientes` (
   `idCliente` INT(11) NOT NULL AUTO_INCREMENT,
-  `idTipoPessoa` INT(11) NOT NULL,
+  `idTipoPessoa` INT(11) NULL DEFAULT NULL,
   `nome` VARCHAR(45) NULL DEFAULT NULL COMMENT 'Nomes proprios\\n do cliente\\n',
   `sobrenome` VARCHAR(45) NULL DEFAULT NULL COMMENT 'sobrenomes do cliente\\n',
   `sexo` VARCHAR(1) NULL DEFAULT NULL COMMENT 'H = Homem\\nM = Mulher\\n',
@@ -19,11 +19,39 @@ CREATE TABLE IF NOT EXISTS `mydb`.`clientes` (
   `CPF_CNPJ` INT(14) NULL DEFAULT NULL,
   `telefone1` INT(13) NULL DEFAULT NULL,
   `Celular` INT(13) NULL DEFAULT NULL,
-  `cliente_criado` DATETIME NULL DEFAULT NULL,
-  `cliente_modficado` DATETIME NULL DEFAULT NULL,
+  `created_at` DATETIME NULL DEFAULT NULL,
+  `updated_at` DATETIME NULL DEFAULT NULL,
+  `password` VARCHAR(45) DEFAULT NULL,
+  `admin` VARCHAR(1) DEFAULT NULL,
+  
   PRIMARY KEY (`idCliente`),
-  INDEX `fk_clientes_tipopessoa_idx` (`idTipoPessoa` ASC) ,
-  CONSTRAINT `fk_clientes_tipopessoa`
+  INDEX `fk_user_tipopessoa_idx` (`idTipoPessoa` ASC) ,
+  CONSTRAINT `fk_cliente_tipopessoa`
+    FOREIGN KEY (`idTipoPessoa`)
+    REFERENCES `mydb`.`tipopessoa` (`idTipoPessoa`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+CREATE TABLE IF NOT EXISTS `mydb`.`users` (
+  `idUser` INT(11) NOT NULL AUTO_INCREMENT,
+  `idTipoPessoa` INT(11) NULL DEFAULT NULL,
+  `nome` VARCHAR(45) NULL DEFAULT NULL COMMENT 'Nomes proprios\\n do cliente\\n',
+  `sobrenome` VARCHAR(45) NULL DEFAULT NULL COMMENT 'sobrenomes do cliente\\n',
+  `sexo` VARCHAR(1) NULL DEFAULT NULL COMMENT 'H = Homem\\nM = Mulher\\n',
+  `email` VARCHAR(100) NULL DEFAULT NULL,
+  `CPF_CNPJ` INT(14) NULL DEFAULT NULL,
+  `telefone1` INT(13) NULL DEFAULT NULL,
+  `Celular` INT(13) NULL DEFAULT NULL,
+  `created_at` DATETIME NULL DEFAULT NULL,
+  `updated_at` DATETIME NULL DEFAULT NULL,
+  `password` VARCHAR(45) DEFAULT NULL,
+  `admin` VARCHAR(1) DEFAULT NULL,
+  
+  PRIMARY KEY (`idUser`),
+  INDEX `fk_user_tipopessoa_idx` (`idTipoPessoa` ASC) ,
+  CONSTRAINT `fk_user_tipopessoa`
     FOREIGN KEY (`idTipoPessoa`)
     REFERENCES `mydb`.`tipopessoa` (`idTipoPessoa`)
     ON DELETE CASCADE
@@ -61,7 +89,7 @@ DEFAULT CHARACTER SET = utf8;
 
 CREATE TABLE IF NOT EXISTS `mydb`.`enderecos` (
   `idEndereco` INT(11) NOT NULL,
-  `idCliente` INT(11) NULL DEFAULT NULL,
+  `idUser` INT(11) NULL DEFAULT NULL,
   `idTipoEndereco` INT(11) NULL DEFAULT NULL,
   `idTipoLogradouro` INT(11) NULL DEFAULT NULL,
   `rua` VARCHAR(100) NULL DEFAULT NULL,
@@ -192,7 +220,7 @@ DEFAULT CHARACTER SET = utf8;
 
 CREATE TABLE IF NOT EXISTS `mydb`.`meiosdepagto` (
   `idMeiosdePagto` INT(11) NOT NULL AUTO_INCREMENT,
-  `idCliente` INT(11) NULL DEFAULT NULL,
+  `idUser` INT(11) NULL DEFAULT NULL,
   `tipoPagto` INT(11) NULL DEFAULT NULL,
   PRIMARY KEY (`idMeiosdePagto`))
 ENGINE = InnoDB
@@ -214,7 +242,7 @@ DEFAULT CHARACTER SET = utf8;
 CREATE TABLE IF NOT EXISTS `mydb`.`pagamentos` (
   `idPagamento` INT(11) NOT NULL AUTO_INCREMENT,
   `idPedido` INT(11) NULL DEFAULT NULL,
-  `idCliente` INT(11) NULL DEFAULT NULL,
+  `idUser` INT(11) NULL DEFAULT NULL,
   `idTipoPagto` INT(11) NULL DEFAULT NULL,
   `valor` DECIMAL(10,2) NULL DEFAULT NULL,
   PRIMARY KEY (`idPagamento`),
@@ -231,7 +259,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`pedidos` (
   `idPedido` INT(11) NOT NULL AUTO_INCREMENT,
   `dataAbertura` DATETIME NULL DEFAULT NULL,
   `dataFechamento` DATETIME NULL DEFAULT NULL,
-  `idCliente` INT(11) NULL DEFAULT NULL,
+  `idUser` INT(11) NULL DEFAULT NULL,
   `idTipoEndereco` INT(11) NULL DEFAULT NULL,
   `idItensPedido` INT(11) NULL DEFAULT NULL,
   `idTipoPagto` INT(11) NULL DEFAULT NULL,
@@ -242,15 +270,15 @@ CREATE TABLE IF NOT EXISTS `mydb`.`pedidos` (
   `pedido_modificado` DATETIME NULL DEFAULT NULL,
   PRIMARY KEY (`idPedido`),
   INDEX `fk_pedidos_tipopagto1_idx` (`idTipoPagto` ASC) ,
-  INDEX `fk_pedidos_clientes1_idx` (`idCliente` ASC) ,
+  INDEX `fk_pedidos_user1_idx` (`idUser` ASC) ,
   CONSTRAINT `fk_pedidos_tipopagto1`
     FOREIGN KEY (`idTipoPagto`)
     REFERENCES `mydb`.`tipopagto` (`idTipoPagto`)
     ON DELETE CASCADE
     ON UPDATE CASCADE,
-  CONSTRAINT `fk_pedidos_clientes1`
-    FOREIGN KEY (`idCliente`)
-    REFERENCES `mydb`.`clientes` (`idCliente`)
+  CONSTRAINT `fk_pedidos_user1`
+    FOREIGN KEY (`idUser`)
+    REFERENCES `mydb`.`users` (`idUser`)
     ON DELETE CASCADE
     ON UPDATE CASCADE)
 ENGINE = InnoDB
@@ -321,24 +349,6 @@ CREATE TABLE IF NOT EXISTS `mydb`.`tipopessoa` (
   PRIMARY KEY (`idTipoPessoa`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
-
-CREATE TABLE IF NOT EXISTS `mydb`.`usuarios` (
-  `idUsuario` INT(11) NOT NULL,
-  `nomeUsuario` VARCHAR(45) NULL DEFAULT NULL,
-  `sobrenomeUsuario` VARCHAR(45) NULL DEFAULT NULL,
-  `emailUsuario` VARCHAR(45) NULL DEFAULT NULL,
-  `telefoneUsuario` INT(13) NULL DEFAULT NULL,
-  `celularUsuario` INT(13) NULL DEFAULT NULL,
-  `rgUsuario` VARCHAR(9) NULL DEFAULT NULL,
-  `cpfUsuario` INT(11) NULL DEFAULT NULL,
-  `carteiraTrabalho` VARCHAR(45) NULL DEFAULT NULL,
-  `dataInicio` DATETIME NULL DEFAULT NULL,
-  `dataFim` DATETIME NULL DEFAULT NULL,
-  `statusUsuario` INT(11) NULL DEFAULT NULL,
-  PRIMARY KEY (`idUsuario`))
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8;
-
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
