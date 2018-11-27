@@ -12,7 +12,7 @@
     <ul>
       @foreach ($produtos as $produto)
 
-      <li>{{ ' codigo produto -'. $produto->sku .' nome do produto - '\r. $produto->nomeProduto  .' '. $produto->descricaoProduto .' '. $produto->unidMedida.' '. $produto->img}}
+      <li>{{ ' codigo produto -'. $produto->sku .' nome do produto - '. $produto->nomeProduto  .' '. $produto->descricaoProduto .' '. $produto->unidMedida.' '. $produto->img}}
 
       <a href="/produtos/editar/{{ $produto->idProduto }}">Editar</a>
       <a href="/produtos/excluir/{{ $produto->idProduto }}">Excluir</a>
