@@ -29,10 +29,8 @@ Route::get('/login', function () {
 Route::get('/logout', function () {
     return view('index');
 });
+Route::get('/cadastro', 'CadastroController@cadastrarUsuario');
 
-Route::get('/cadastro', function () {
-    return view('cadastro');
-});
 
 Route::get('/validacao', function () {
     return view('validacao');
