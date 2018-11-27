@@ -17,6 +17,18 @@ Route::get('/', function () {
 
 Route::get('/tipopagto', 'TipoPagtoController@exibir');
 
+Route::get('/produtos', 'ProdutosController@exibir');
+Route::get('/produtos/add', 'ProdutosController@novo');
+Route::post('/produtos/add', 'ProdutosController@adicionar');
+
+Route::get('/produtos/editar/{id}', 'ProdutosController@editar');
+Route::put('/produtos/editar/{id}', 'ProdutosController@editarProduto');
+
+Route::get('/produtos/excluir/{id}', 'ProdutosController@excluir');
+Route::delete('/produtos/excluir/{id}', 'ProdutosController@excluirProduto');
+
+Route::get('/categorias', 'CategoriasController@exibir');
+
 
 Route::get('/faq', function () {
     return view('faq');
