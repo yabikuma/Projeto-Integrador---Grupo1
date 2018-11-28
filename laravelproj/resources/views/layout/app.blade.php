@@ -43,15 +43,15 @@
         Categorias
       </a>
       <div class="dropdown-menu">
-      
-        
+
+
 
         <a class="dropdown-item" href="#">Moedas</a>
         <a class="dropdown-item" href="#">Vinil</a>
         <a class="dropdown-item" href="#">Video Games</a>
         <a class="dropdown-item" href="#">Brinquedos</a>
-    
-    
+
+
       </div>
       </li>
 
@@ -76,7 +76,7 @@
      ><a class="header-button-text" href="/login">Login</a>
     </button>
      <button type="submit" class="btn btn-info btn-xs btn-outline-light" id="header-button"
-     ><a class="header-button-text" href="/cadastro">Sign in</a>
+     ><a class="header-button-text" href="/register">Sign in</a>
    </button>
  <?php endif; ?>
 
@@ -84,9 +84,9 @@
   </div>
 </nav>
 </div>
-            
+
             @yield('content')
-      
+
 
 <footer class="bg-dark text-white mt-4 container fbottom" >
         <div class="container-fluid py-3">

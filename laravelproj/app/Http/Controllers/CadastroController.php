@@ -16,7 +16,7 @@ class CadastroController extends Controller
 
     public function adicionarUsuario(Request $request)
 {
-      // $input = $request->all();
+       $input = $request->all();
 
       $request->validate([
         'nome' => 'required',

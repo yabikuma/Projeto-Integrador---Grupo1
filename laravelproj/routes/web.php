@@ -27,7 +27,7 @@ Route::put('/produtos/editar/{id}', 'ProdutosController@editarProduto');
 Route::get('/produtos/excluir/{id}', 'ProdutosController@excluir');
 Route::delete('/produtos/excluir/{id}', 'ProdutosController@excluirProduto');
 
-Route::get('/categorias', 'CategoriasController@exibir');
+Route::post('/categorias', 'CategoriasController@exibir');
 
 
 Route::get('/faq', function () {
@@ -52,6 +52,10 @@ Route::get('/validacao', function () {
 
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 
