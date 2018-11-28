@@ -46,10 +46,10 @@
       
         
 
-        <a class="dropdown-item" href="#">Moedas</a>
-        <a class="dropdown-item" href="#">Vinil</a>
-        <a class="dropdown-item" href="#">Video Games</a>
-        <a class="dropdown-item" href="#">Brinquedos</a>
+        <a class="dropdown-item" href="/produtos/lista#">Moedas</a>
+        <a class="dropdown-item" href="/produtos/lista#vinil">Vinil</a>
+        <a class="dropdown-item" href="/produtos/lista#videogames">Video Games</a>
+        <a class="dropdown-item" href="/produtos/lista#brinquedos">Brinquedos</a>
     
     
       </div>
@@ -76,7 +76,7 @@
      ><a class="header-button-text" href="/login">Login</a>
     </button>
      <button type="submit" class="btn btn-info btn-xs btn-outline-light" id="header-button"
-     ><a class="header-button-text" href="/cadastro">Sign in</a>
+     ><a class="header-button-text" href="/register">Sign in</a>
    </button>
  <?php endif; ?>
 

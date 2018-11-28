@@ -17,6 +17,11 @@ Route::get('/', function () {
 
 Route::get('/tipopagto', 'TipoPagtoController@exibir');
 
+Route::get('/produtos/lista', function () {
+    return view('produtos_lista');
+});
+
+
 Route::get('/produtos', 'ProdutosController@exibir');
 Route::get('/produtos/add', 'ProdutosController@novo');
 Route::post('/produtos/add', 'ProdutosController@adicionar');
