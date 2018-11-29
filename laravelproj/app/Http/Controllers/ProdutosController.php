@@ -10,7 +10,7 @@ class ProdutosController extends Controller
 {
     public function exibir(){
         $produtos =Produtos::all();
-         
+
         return view('produtos_exibir')->with('produtos',$produtos);
       }
 
@@ -22,13 +22,13 @@ class ProdutosController extends Controller
     public function adicionar(Request $request){
 
         //$request->validate(['nome' => 'require|unique:categoria|max:10']);
-         
-  
+
+
             $arquivo = $request->file('img');
             if (empty($arquivo)) {
             abort(400, 'Nenhum arquivo foi enviado');
             }
-            // salvando 
+            // salvando
             $nomePasta ='produto';
             $arquivo->storePublicly($nomePasta);
             $caminho = public_path()."\\storage\\$nomePasta";
@@ -63,17 +63,17 @@ class ProdutosController extends Controller
         $produto = Produtos::find($id);
         return view('produtos_editar')->with('produto', $produto);
         }
-        
-              
+
+
 
         public function editarProduto(Request $request, $id){
             //$request->validate(['nome' => 'required|min:2|unique:categoria']);
-        
+
             $arquivo = $request->file('img');
             if (empty($arquivo)) {
             abort(400, 'Nenhum arquivo foi enviado');
             }
-            // salvando 
+            // salvando
             $nomePasta ='produto';
             $arquivo->storePublicly($nomePasta);
             $caminho = public_path()."\\storage\\$nomePasta";
@@ -93,24 +93,24 @@ class ProdutosController extends Controller
             $produto->img = "storage/$nomePasta/$nomeArquivo";
 
 
-            
+
 
             $produto->save();
-        
+
             return redirect('produtos');
             }
-        
+
 
         public function excluir($id){
             $produto = Produtos::find($id);
             return view('produtos_excluir')->with('produto', $produto);
-          
+
         }
-          
+
         public function excluirProduto($id){
             $produto = Produtos::find($id);
             $produto->delete();
-          
+
             return redirect('produtos');
         }
 
@@ -121,7 +121,7 @@ class ProdutosController extends Controller
             $produtos =Produtos::where('idCategoria','=',$id)->get();
 
             $categorias =Categorias::where('idCategoria','=',$id)->first();
-            
+
             return view('produtos_lista',['produtos'=>$produtos,'categorias'=>$categorias]);
 
 
@@ -129,10 +129,17 @@ class ProdutosController extends Controller
 
 
 
+          public function exibirproduto_detalhe($id){
+
+              $produto =Produtos::where('idProduto','=',$id)->first();
+
+              return view('produto_detalhe',['produto'=>$produto,]);
+
+
+            }
 
 
 
 
-          
 
 }
