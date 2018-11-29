@@ -43,13 +43,13 @@
         Categorias
       </a>
       <div class="dropdown-menu">
-      
-        
 
-        <a class="dropdown-item" href="/produtos/lista#">Moedas</a>
-        <a class="dropdown-item" href="/produtos/lista#vinil">Vinil</a>
-        <a class="dropdown-item" href="/produtos/lista#videogames">Video Games</a>
-        <a class="dropdown-item" href="/produtos/lista#brinquedos">Brinquedos</a>
+
+
+        <a class="dropdown-item" href="/produtos/lista/3">Moedas</a>
+        <a class="dropdown-item" href="/produtos/lista/4">Vinil</a>
+        <a class="dropdown-item" href="/produtos/lista/2">Video Games</a>
+        <a class="dropdown-item" href="/produtos/lista/1">Brinquedos</a>
     
     
       </div>
@@ -84,9 +84,9 @@
   </div>
 </nav>
 </div>
-            
+
             @yield('content')
-      
+
 
 <footer class="bg-dark text-white mt-4 container fbottom" >
         <div class="container-fluid py-3">

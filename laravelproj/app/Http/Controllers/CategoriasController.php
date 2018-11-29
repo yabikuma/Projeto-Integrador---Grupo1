@@ -13,4 +13,7 @@ class CategoriasController extends Controller
         return view('categorias_exibir')->with('categorias',$categorias);
     }
 
+
+
+    
 }

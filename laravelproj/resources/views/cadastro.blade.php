@@ -10,28 +10,39 @@
 
     <!-- IMPRIME NA TELA A VALIDAÇÃO DE PREENCHIMENTO DO FORMULÁRIO -->
 
-      <?php if (isset($msg_error) && count($msg_error)) : ?>
-        <div class="error col-5" >
-          <?php echo implode ("<br>", $msg_error); ?>
-        </div>
-      <?php endif; ?>
 
 
+  <form class="cadastroform" action="   " method="post"  enctype="multipart/form-data">
 
-  <form class="cadastroform" action="/cadastro" method="post"  enctype="multipart/form-data">
+    {{ csrf_field() }}
 
-    <label for="nome">Seu nome</label><br>
-    <input class="form-control" type="text" name="nome" value='<?php echo isset($_POST['nome'])?$_POST['nome']:''; ?>'>
+    <label for="nome">Nome</label><br>
+    <input class="form-control" type="text" name="nome">
+
+    <label for="sobrenome">Sobrenome</label><br>
+    <input class="form-control" type="text" name="sobrenome">
+
+    <label for="telefone">Telefone</label><br>
+    <input class="form-control" type="tel" name="telefone">
+
+    <label for="celular">Celular</label><br>
+    <input class="form-control" type="tel" name="celular">
+
+    <label for="rg">RG</label><br>
+    <input class="form-control" type="text" name="rg">
+
+    <label for="cpf">CPF</label><br>
+    <input class="form-control" type="text" name="cpf">
 
     <label for="email">E-mail</label><br>
-    <input class="form-control" type="text" name="email" value='<?php echo isset($_POST['email'])?$_POST['email']:''; ?>'>
+    <input class="form-control" type="text" name="email">
 
     <label for="senha">Senha</label><br>
-    <input class="form-control" type="password" name="senha" value='<?php echo isset($_POST['senha'])?$_POST['senha']:''; ?>'>
+    <input class="form-control" type="password" name="senha">
     <!-- <p>* As senhas devem ter pelo menos 6 caracteres.</p> -->
 
     <label for="confsenha">Inserir a senha nova mais um vez</label><br>
-    <input class="form-control" type="password" name="confsenha" value='<?php echo isset($_POST['confsenha'])?$_POST['confsenha']:''; ?>' ><br>
+    <input class="form-control" type="password" name="confsenha">
 
     <!-- <label class= "p-3 mb-2 bg-dark text-white.bg-dark" for="arquivo">Adicionar foto de perfil</label><br><br> -->
 
@@ -39,21 +50,19 @@
 
     <label>Preferências:</label><br>
 
-    <?php
-    $preferencias = isset($_POST['preferencias'])?$_POST['preferencias']:[];
-    ?>
-
-    <input type="checkbox" name="preferencias[]" id="moedas" value="moedas" <?php echo in_array('moedas', $preferencias)?'checked':''; ?> >
+    <input type="checkbox" name="preferencias[]" id="moedas" value="moedas">
     <label for="moedas">Moedas</label>
-    <input type="checkbox" name="preferencias[]" id="vinil" value="vinil" <?php echo in_array('vinil', $preferencias)?'checked':''; ?> >
+    <input type="checkbox" name="preferencias[]" id="vinil" value="vinil">
     <label for="vinil">Vinil</label>
-    <input type="checkbox" name="preferencias[]" id="videogames" value="videogames" <?php echo in_array('videogames', $preferencias)?'checked':''; ?> >
+    <input type="checkbox" name="preferencias[]" id="videogames" value="videogames">
     <label for="videogames">Video Games</label>
-    <input type="checkbox" name="preferencias[]" id="brinquedos" value="brinquedos" <?php echo in_array('brinquedos', $preferencias)?'checked':''; ?> >
+    <input type="checkbox" name="preferencias[]" id="brinquedos" value="brinquedos">
     <label for="brinquedos">Brinquedos</label><br>
 
 
-    <button class="btn botao form-control" type="submit">Criar sua senha na GenVintage</button>
+    <button class="btn botao form-control" type="submit">Criar sua conta na GenVintage</button>
+
+
 
 
 
