@@ -37,6 +37,9 @@ Route::get('/faq', function () {
     return view('faq');
 });
 
+Route::get('/produto_detalhe/{id}', 'ProdutosController@exibir_detalhe');
+
+
 Route::get('/login', function () {
     return view('login');
 });

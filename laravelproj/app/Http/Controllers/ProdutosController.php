@@ -118,18 +118,26 @@ class ProdutosController extends Controller
 
 
         public function exibirprodutos($id){
-            $produtos =Produtos::where('idCategoria','=',$id)->get();
+            $produtos =Produtos::where('idCategoria','=',$id)->paginate(4);
 
             $categorias =Categorias::where('idCategoria','=',$id)->first();
             
+            
+
             return view('produtos_lista',['produtos'=>$produtos,'categorias'=>$categorias]);
 
-
+            
           }
 
 
 
+          public function exibir_detalhe($id){
+            $produto =Produtos::where('idProduto','=',$id)->first();
+            
+            return view('produto_detalhe',['produto'=>$produto]);
 
+
+          }
 
 
 
