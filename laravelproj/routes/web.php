@@ -54,6 +54,7 @@ Route::get('/validacao', function () {
     return view('validacao');
 });
 
+Route::get('/produto_detalhe/{id}', 'ProdutosController@exibirproduto_detalhe');
 
 
 
@@ -62,4 +63,3 @@ Route::get('/validacao', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
