@@ -15,9 +15,9 @@
 
       @csrf
 
-        <input type="email" name="email" class="form-control mb-4 {{ $errors->has('email') ? ' is-invalid' : '' }}" value= "{{ old('email') }}" required autofocus>
+        <input type="email" name="email" class="form-control mb-4 {{ $errors->has('email') ? ' is-invalid' : '' }}" value= "{{ old('email') }}" placeholder="email@email.com" required autofocus>
 
-        <input type="password" name="password" class="form-control mb-4 {{ $errors->has('password') ? ' is-invalid' : '' }}" required>
+        <input type="password" name="password" class="form-control mb-4 {{ $errors->has('password') ? ' is-invalid' : '' }}" placeholder="Senha" required>
         @if ($errors->has('password'))
           <span class="invalid-feedback" role="alert">
             <strong>{{ $errors->first('password') }}</strong>

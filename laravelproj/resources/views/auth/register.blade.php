@@ -24,7 +24,7 @@
                             <label for="name" class="col-md-4 col-form-label text-md-right">Nome</label>
 
                             <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="name" required autofocus>
+                                <input id="name" type="text" class="form-control" name="name" placeholder="Nome" required autofocus>
                             </div>
                         </div>
 
@@ -33,7 +33,7 @@
                             <label for="sobrenome" class="col-md-4 col-form-label text-md-right">Sobrenome</label>
 
                             <div class="col-md-6">
-                                <input id="sobrenome" type="text" class="form-control" name="sobrenome" required autofocus>
+                                <input id="sobrenome" type="text" class="form-control" name="sobrenome" placeholder="Sobrenome" required autofocus>
                             </div>
                         </div>
 
@@ -43,7 +43,7 @@
                             <label for="CPF_CNPJ" class="col-md-4 col-form-label text-md-right">CPF</label>
 
                             <div class="col-md-6">
-                                <input id="CPF_CNPJ" type="text" class="form-control" name="CPF_CNPJ" required autofocus>
+                                <input id="CPF_CNPJ" type="text" class="form-control" name="CPF_CNPJ" placeholder="00000000000" required autofocus>
                           </div>
                         </div>
 
@@ -52,7 +52,7 @@
                             <label for="telefone1" class="col-md-4 col-form-label text-md-right">Telefone</label>
 
                             <div class="col-md-6">
-                                <input id="telefone1" type="text" class="form-control" name="telefone1" required autofocus>
+                                <input id="telefone1" type="text" class="form-control" name="telefone1" placeholder="00000000" required autofocus>
                             </div>
                         </div>
 
@@ -61,7 +61,7 @@
                             <label for="celular" class="col-md-4 col-form-label text-md-right">Celular</label>
 
                             <div class="col-md-6">
-                                <input id="celular" type="text" class="form-control" name="celular" required autofocus>
+                                <input id="celular" type="text" class="form-control" name="celular" placeholder="000000000" required autofocus>
                             </div>
                         </div>
 
@@ -70,7 +70,7 @@
                             <label for="email" class="col-md-4 col-form-label text-md-right">E-mail</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" required>
+                                <input id="email" type="email" class="form-control" name="email" placeholder="email@email.com" required>
                             </div>
                         </div>
 
@@ -78,7 +78,7 @@
                             <label for="password" class="col-md-4 col-form-label text-md-right">Senha</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
+                                <input id="password" type="password" class="form-control" name="password" placeholder="Senha" required>
                             </div>
                         </div>
 
@@ -86,7 +86,7 @@
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-right">Confirme a senha</label>
 
                             <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password" required>
+                                <input id="password-confirm" type="password" class="form-control" name="password"  placeholder="Confirme a Senha" required>
                             </div>
                         </div>
 
