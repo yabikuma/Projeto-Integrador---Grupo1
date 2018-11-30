@@ -34,29 +34,19 @@ Route::get('/faq', function () {
     return view('faq');
 });
 
-Route::get('/login', function () {
-    return view('login');
-});
+Route::get('/login', 'LoginController@login');
+
+Route::post('/cadastro', 'CadastroController@cadastrarUsuario');
 
 Route::get('/logout', function () {
     return view('index');
 });
-Route::get('/cadastro', 'CadastroController@cadastrarUsuario');
-
 
 Route::get('/validacao', function () {
     return view('validacao');
 });
 
-
-
-
-
-
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', function () {
+    return redirect('/');
+});

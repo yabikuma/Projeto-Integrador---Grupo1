@@ -47,6 +47,7 @@
                                 @if (Route::has('register'))
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 @endif
+
                             </li>
                         @else
                             <li class="nav-item dropdown">

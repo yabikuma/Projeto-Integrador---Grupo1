@@ -3,32 +3,42 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Usuario;
+use Illuminate\Support\Facades\Hash;
+use App\User;
+use Validator;
 
 class CadastroController extends Controller
 {
-    public function cadastrarUsuario(){
+    public function cadastrarUsuario(Request $request){
+      // $input = $request->all();
 
-      return view('cadastro');
-    }
+      $arquivo = $request->file('arquivo');
+      // if (empty($arquivo)) {
+      //   abort(400, 'Nenhum arquivo foi enviado');
+      // }
+      // salvando
+      $nomePasta = 'fotoUsuario';
+      $arquivo->storePublicly($nomePasta);
+      $caminho = public_path()."\\storage\\$nomePasta";
+      $nomeArquivo = $arquivo->getClientOriginalName();
+     // movendo
+      $arquivo->move($caminho, $nomeArquivo);
 
+      $usuario = User::create([
+        'idTipoPessoa' => $request->input('idTipoPessoa'),
+        'name' => $request->input('name'),
+        'sobrenome' => $request->input('sobrenome'),
+        'CPF_CNPJ' => $request->input('CPF_CNPJ'),
+        'telefone1' => $request->input('telefone1'),
+        'Celular' => $request->input('Celular'),
+        'email' =>$request->input('email'),
+        'password'=>$request->input('password'),
+        'fotoUrl'=>"storage/$nomePasta/$nomeArquivo"
+      ]);
 
+      $usuario->save();
 
-    public function adicionarUsuario(Request $request)
-{
-       $input = $request->all();
-
-      $request->validate([
-        'nome' => 'required',
-        'sobrenome' => 'required',
-        'telefone' => 'required',
-        'celular' => 'required',
-        'rg' => 'required',
-        'cpf' => 'required',
-        'email' => 'required',
-        'senha' => 'required',
-        'confsenha' => 'required',
-  ]);
+      return redirect('/login');
 
 }
 }
