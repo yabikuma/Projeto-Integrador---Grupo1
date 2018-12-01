@@ -8,5 +8,5 @@ class Produtos extends Model
 {
     protected $table='produtos';
     protected $primaryKey = 'idProduto';
-    protected $fillable = ['sku', 'nomeProduto','descricaoProduto','unidMedida','img'];
+    protected $fillable = ['sku', 'nomeProduto','descricaoProduto','idCategoria','unidMedida','img'];
 }

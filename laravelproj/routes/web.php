@@ -17,6 +17,9 @@ Route::get('/', function () {
 
 Route::get('/tipopagto', 'TipoPagtoController@exibir');
 
+
+Route::get('/produtos/lista/{id}', 'ProdutosController@exibirprodutos');
+
 Route::get('/produtos', 'ProdutosController@exibir');
 Route::get('/produtos/add', 'ProdutosController@novo');
 Route::post('/produtos/add', 'ProdutosController@adicionar');

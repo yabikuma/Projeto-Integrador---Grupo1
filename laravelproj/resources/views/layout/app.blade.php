@@ -9,6 +9,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <title>GenVintage</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -46,12 +47,12 @@
 
 
 
-        <a class="dropdown-item" href="#">Moedas</a>
-        <a class="dropdown-item" href="#">Vinil</a>
-        <a class="dropdown-item" href="#">Video Games</a>
-        <a class="dropdown-item" href="#">Brinquedos</a>
-
-
+        <a class="dropdown-item" href="/produtos/lista/3">Moedas</a>
+        <a class="dropdown-item" href="/produtos/lista/4">Vinil</a>
+        <a class="dropdown-item" href="/produtos/lista/2">Video Games</a>
+        <a class="dropdown-item" href="/produtos/lista/1">Brinquedos</a>
+    
+    
       </div>
       </li>
 
