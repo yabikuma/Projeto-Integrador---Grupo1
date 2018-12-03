@@ -26,6 +26,7 @@
 
 
       <button type="submit">Excluir</button>
+      <button type="submit"><a href="/produtos">Voltar</a></button>
 
     </form>
 

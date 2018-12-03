@@ -68,12 +68,12 @@
 
     <ul class="nav navbar-nav nav-link ml-auto" id="header-button-list">
       @guest
-          <li class="nav-item">
-              <a class="nav-link" href="{{ route('login') }}">{{ __('Entrar') }}</a>
+          <li class="btn btn-info btn-xs btn-outline-light">
+              <a class="header-button-text" href="{{ route('login') }}">{{ __('Entrar') }}</a>
           </li>
-          <li class="nav-item">
+          <li class="btn btn-info btn-xs btn-outline-light">
               @if (Route::has('register'))
-                  <a class="nav-link" href="{{ route('register') }}">{{ __('Cadastre-se') }}</a>
+                  <a class="header-button-text" href="{{ route('register') }}">{{ __('Cadastre-se') }}</a>
               @endif
           </li>
       @else

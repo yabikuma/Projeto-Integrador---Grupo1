@@ -35,6 +35,7 @@
       <input type="file" name="img"><br>
 
       <button type="submit">Editar</button>
+      <button type="submit"><a href="/produtos">Voltar</a></button>
 
     </form>
 

@@ -33,6 +33,7 @@
 
 
       <button type="submit">Adicionar</button>
+      <button type="submit"><a href="/produtos">Voltar</a></button>
 
     </form>
 
