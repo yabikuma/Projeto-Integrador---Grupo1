@@ -36,7 +36,7 @@
         <a class="nav-link" href="/">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Quem Somos</a>
+        <a class="nav-link" href="/quemsomos">Quem Somos</a>
       </li>
 
       <li class="nav-item dropdown">
@@ -51,13 +51,13 @@
         <a class="dropdown-item" href="/produtos/lista/4">Vinil</a>
         <a class="dropdown-item" href="/produtos/lista/2">Video Games</a>
         <a class="dropdown-item" href="/produtos/lista/1">Brinquedos</a>
-    
-    
+
+
       </div>
       </li>
 
       <li class="nav-item">
-          <a class="nav-link" href="#">Contato</a>
+          <a class="nav-link" href="/contato">Contato</a>
       </li>
       <li class="nav-item">
           <a class="nav-link" href="/faq">FAQ</a>

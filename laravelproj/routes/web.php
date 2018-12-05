@@ -49,6 +49,14 @@ Route::get('/validacao', function () {
     return view('validacao');
 });
 
+Route::get('/quemsomos', function () {
+    return view('quemsomos');
+});
+
+Route::get('/contato', function () {
+    return view('contato');
+});
+
 Auth::routes();
 Route::get('/home', function () {
     return redirect('/');
