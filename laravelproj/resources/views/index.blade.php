@@ -50,34 +50,18 @@
 			</div>
 		</div>
 
+		
 		<div class="row">
+		@foreach ($categorias as $categoria)
 			<!--Row Produtos-->
 			<div class="col-12 col-sm-6 col-md-3 product">
-				<h6 class="prod">Vinil</h6>
-				<img src="img/vintage1.jpeg" class="img-thumbnail">
+				<h6 class="prod">{{$categoria->descricaoCategoria}}</h6>
+				<img src="/{{$categoria->img}}" class="img-thumbnail">
 				<button type="button" class="btn btn-primary">Comprar</button>
 			</div>
-
-			<div class="col-12 col-sm-6 col-md-3 product">
-				<h6 class="prod">Video Games</h6>
-				<img src="img/vintage2.jpeg" class="img-thumbnail">
-				<button type="button" class="btn btn-primary">Comprar</button>
-			</div>
-
-			<div class="col-12 col-sm-6 col-md-3 product">
-				<h6 class="prod">Moedas</h6>
-				<img src="img/vintage3.jpeg" class="img-thumbnail">
-				<button type="button" class="btn btn-primary">Comprar</button>
-			</div>
-
-			<div class="col-12 col-sm-6 col-md-3 product">
-				<h6 class="prod">Brinquedos</h6>
-				<img src="img/vintage4.jpeg" class="img-thumbnail">
-				<button type="button" class="btn btn-primary">Comprar</button>
-			</div>
-
+		@endforeach
 		</div>
-		<!-- Fim da Row Produtos-->
+
 	</section>
 	<!--Fim da Categorias-->
 

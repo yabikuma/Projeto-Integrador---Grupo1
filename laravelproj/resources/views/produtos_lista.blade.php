@@ -17,15 +17,15 @@
         <div class="col-md-3 col-sm-6">
             <div class="product-grid2">
                 <div class="product-image2">
-                    <a href="#">
+                    <a href="/produtos/detalhe/{{$produto->idProduto}}">
                         <img class="pic-1" src="/{{$produto->img}}">
                     </a>
                     
-                    <a class="add-to-cart" href="">Add to cart</a>
+                    <!--<a class="add-to-cart" href="">Add to cart</a>-->
                 </div>
                 <div class="product-content">
-                    <h3 class="title"><a href="#">Women's Designer Top</a></h3>
-                    <span class="price">$599.99</span>
+                    <h3 class="title"><a href="#">{{$produto->nomeProduto}}</a></h3>
+                    <span class="price">{{$produto->preco}}</span>
                 </div>
             </div>
         </div>
@@ -38,7 +38,7 @@
 
     </div>
 
-    <div class="col-xs-12"> 
+    <div class="pagination-centered"> 
     {{ $produtos->links()}}
     </div>
 

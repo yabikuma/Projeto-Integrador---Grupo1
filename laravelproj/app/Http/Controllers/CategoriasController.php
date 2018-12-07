@@ -13,6 +13,12 @@ class CategoriasController extends Controller
         return view('categorias_exibir')->with('categorias',$categorias);
     }
 
+    public function exibirindex(){
+        $categorias =Categorias::all();
+         
+        return view('/index')->with('categorias',$categorias);
+    }
+
 
 
     

@@ -4,8 +4,8 @@
 
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
-{{$produto->nomeProduto}}
-  <p id="nome_produto" class="bg-dark text-white text-uppercase">{{$produto->nomeProduto}}</p>
+
+  
 
   <div class="container">
       <div class="row">
@@ -14,8 +14,8 @@
               <div class="card bg-light mb-3">
                   <div class="card-body">
                       <a href="" data-toggle="modal" data-target="#productModal">
-                          <img class="img-fluid" src="https://dummyimage.com/800x800/55595c/fff" />
-                          <p class="text-center">Zoom</p>
+                          <img class="img-fluid" src="/{{$produto->img}}">
+                          
                       </a>
                   </div>
               </div>
@@ -25,28 +25,29 @@
           <div class="col-12 col-lg-6 add_to_cart_block">
               <div class="card bg-light mb-3">
                   <div class="card-body">
+                  <p id="nome_produto" class="bg-dark text-white text-uppercase">{{$produto->nomeProduto}}</p>
+                      <p class="price_discounted">{{$produto->descricaoProduto}} </p>
                       <p class="price">R$ 99.00 </p>
-                      <p class="price_discounted">R$ 149.90 </p>
                       <form method="get" action="cart.html">
                             <div class="form-group">
                               <label>Quantidade :</label>
                               <div class="input-group mb-3">
                                   <div class="input-group-prepend">
-                                      <button type="button" class="quantity-left-minus btn btn-danger btn-number"  data-type="minus" data-field="">
+                                      <!--<button type="button" class="quantity-left-minus btn btn-danger btn-number"  data-type="minus" data-field="">
                                           <i class="fa fa-minus"></i>
-                                      </button>
+                                      </button>-->
                                   </div>
                                   <input type="text" class="form-control"  id="quantity" name="quantity" min="1" max="100" value="1">
                                   <div class="input-group-append">
-                                      <button type="button" class="quantity-right-plus btn btn-success btn-number" data-type="plus" data-field="">
+                                      <!--<button type="button" class="quantity-right-plus btn btn-success btn-number" data-type="plus" data-field="">
                                           <i class="fa fa-plus"></i>
-                                      </button>
+                                      </button>-->
                                   </div>
                               </div>
                           </div>
-                          <a href="cart.html" class="btn btn-success btn-lg btn-block text-uppercase">
+                          <!--<a href="#" class="btn btn-success btn-lg btn-block text-uppercase">
                               <i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho
-                          </a>
+                          </a>-->
                       </form>
                       <div class="product_rassurance">
                           <ul class="list-inline">
@@ -132,6 +133,7 @@
           </div>
       </div>
   </div>
+
 
 @stop
 

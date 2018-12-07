@@ -13,7 +13,6 @@
   <tr>
   <td width="80" height="30">Código</td>
   <td width="200" height="30">Nome</td>
-  <td width="300" height="30">Descrição</td>
   <td width="50" height="30">Unid.</td>
   <td width="250" height="30">Imagem</td>
   <td width="50" height="30">Categoria</td>
@@ -25,7 +24,6 @@
   <tr>
   <td>{{$produto->sku}}</td>
   <td>{{$produto->nomeProduto}}</td>
-  <td>{{$produto->descricaoProduto}}</td>
   <td>{{$produto->unidMedida}}</td>
   <td>{{$produto->img}}</td>
   <td>{{$produto->idCategoria}}</td>

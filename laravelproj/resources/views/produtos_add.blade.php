@@ -28,6 +28,8 @@
       <input type="text" name="idCategoria"><br>
       <label>Unidade de Medida</label><br>
       <input type="text" name="unidMedida"><br>
+      <label>Preço</label><br>
+      <input type="text" name="preco"><br>
       <label>Foto do Produto</label><br>
       <input type="file" name="img"><br><br>
 

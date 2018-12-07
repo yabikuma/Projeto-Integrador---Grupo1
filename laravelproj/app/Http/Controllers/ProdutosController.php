@@ -44,6 +44,7 @@ class ProdutosController extends Controller
             'nomeProduto'=>$request->input('nomeProduto'),
             'descricaoProduto'=>$request->input('descricaoProduto'),
             'unidMedida'=>$request->input('unidMedida'),
+            'preco'=>$request->input('preco'),
             'idCategoria'=>$request->input('idCategoria'),
             'img'=>"storage/$nomePasta/$nomeArquivo"
 
@@ -69,28 +70,33 @@ class ProdutosController extends Controller
         public function editarProduto(Request $request, $id){
             //$request->validate(['nome' => 'required|min:2|unique:categoria']);
 
-            $arquivo = $request->file('img');
-            if (empty($arquivo)) {
-            abort(400, 'Nenhum arquivo foi enviado');
-            }
-            // salvando
-            $nomePasta ='produto';
-            $arquivo->storePublicly($nomePasta);
-            $caminho = public_path()."\\storage\\$nomePasta";
-            $nomeArquivo = $arquivo->getClientOriginalName();
-            // movendo
-            $arquivo->move($caminho, $nomeArquivo);
-            // return view('imagem')->with('caminho', $caminho)->with('nomeArquivo', $nomeArquivo)->with('nomePasta', $nomePasta);
-            // }
-
-
-
             $produto = Produtos::find($id);
+          
+            $arquivo = $request->file('img');
+            if (!empty($arquivo)){
+
+                // salvando
+                $nomePasta ='produto';
+                $arquivo->storePublicly($nomePasta);
+                $caminho = public_path()."\\storage\\$nomePasta";
+                $nomeArquivo = $arquivo->getClientOriginalName();
+                // movendo
+                $arquivo->move($caminho, $nomeArquivo);
+                // return view('imagem')->with('caminho', $caminho)->with('nomeArquivo', $nomeArquivo)->with('nomePasta', $nomePasta);
+                // }
+                $produto->img = "storage/$nomePasta/$nomeArquivo";
+
+            }
+
+
+
+
+            
             $produto->sku = $request->input('sku');
             $produto->nomeProduto = $request->input('nomeProduto');
             $produto->descricaoProduto = $request->input('descricaoProduto');
             $produto->unidMedida = $request->input('unidMedida');
-            $produto->img = "storage/$nomePasta/$nomeArquivo";
+            $produto->preco = $request->input('preco');
 
 
 
@@ -135,7 +141,7 @@ class ProdutosController extends Controller
 
               $produto =Produtos::where('idProduto','=',$id)->first();
 
-              return view('produto_detalhe',['produto'=>$produto,]);
+              return view('produto_detalhe',['produto'=>$produto]);
 
 
             }

@@ -8,7 +8,7 @@
   <h1 id=topo>Criar Conta</h1>
 
                 <div class="card-body">
-                    <form method="POST" action="/cadastro" enctype="multipart/form-data">
+                    <form method="POST" action="/cadastro" name="cadastro" enctype="multipart/form-data">
                         {{ csrf_field() }}
 
 
@@ -41,12 +41,26 @@
 
                         <div class="form-group row">
                             <label for="CPF_CNPJ" class="col-md-4 col-form-label text-md-right">CPF</label>
-
                             <div class="col-md-6">
                                 <input id="CPF_CNPJ" type="text" class="form-control" name="CPF_CNPJ" placeholder="00000000000" required autofocus>
                           </div>
                         </div>
 
+
+
+                        <div class="form-group row">
+                            <label for="estado" class="col-md-4 col-form-label text-md-right">Estado</label>
+                            <div class="col-md-6">
+                            <select name="estado" class="form-control" id="estado" class="form-control"></select>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="cidade" class="col-md-4 col-form-label text-md-right">Cidade</label>
+                            <div class="col-md-6">
+                            <select name="cidade" class="form-control" id="cidade" class="form-control"></select>
+                            </div>
+                        </div>
 
                         <div class="form-group row">
                             <label for="telefone1" class="col-md-4 col-form-label text-md-right">Telefone</label>
@@ -90,7 +104,7 @@
                             </div>
                         </div>
 
-                        <input type="file" class="col-md-4 col btn botao form-control" name="arquivo">
+                        <input type="file" class="col-md-4 col btn botao form-control" id="foto" name="arquivo" required>
                                 @if (count($errors) > 0)
                                   <div class="alert alert-danger">
                                     <ul>
@@ -104,11 +118,14 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">Cadastrar</button>
+                                <div class="exibirErros"></div>
+                                <button type="button" class="btn btn-primary btn-submit">Cadastrar</button>
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
         </div>
+
+        <script src="/js/validacao.js"></script>
 @stop

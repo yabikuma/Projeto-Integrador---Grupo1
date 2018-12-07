@@ -11,14 +11,21 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('index');
-});
+});*/
+
+Route::get('/', 'CategoriasController@exibirindex');
+
+
 
 Route::get('/tipopagto', 'TipoPagtoController@exibir');
 
 
 Route::get('/produtos/lista/{id}', 'ProdutosController@exibirprodutos');
+
+
+Route::get('/produtos/detalhe/{id}', 'ProdutosController@exibirproduto_detalhe');
 
 Route::get('/produtos', 'ProdutosController@exibir');
 Route::get('/produtos/add', 'ProdutosController@novo');
